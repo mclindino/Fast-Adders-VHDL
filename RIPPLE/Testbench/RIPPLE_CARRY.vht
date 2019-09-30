@@ -23,7 +23,6 @@ COMPONENT RIPPLE_CARRY
 	a : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
 	b : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
 	s : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
-	clk : IN STD_LOGIC;
 	cin : IN STD_LOGIC;
 	cout : OUT STD_LOGIC
 	);
@@ -44,7 +43,7 @@ END COMPONENT;
 --END FUNCTION str_to_stdvec;
 
 BEGIN
-	i1 : RIPPLE_CARRY PORT MAP (a => a, b => b, s => s, clk => clk, cin => cin, cout => cout);
+	i1 : RIPPLE_CARRY PORT MAP (a => a, b => b, s => s, cin => cin, cout => cout);
 	
 	Clock: PROCESS
 	BEGIN

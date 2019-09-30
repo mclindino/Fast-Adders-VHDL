@@ -19,7 +19,6 @@ SIGNAL s : STD_LOGIC_VECTOR(31 DOWNTO 0);
 COMPONENT CARRY_SELECT
 	PORT (
 	a : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
-	clk : IN STD_LOGIC;
 	cin : IN STD_LOGIC;
 	b : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
 	cout : OUT STD_LOGIC_VECTOR(1 DOWNTO 0);
@@ -28,7 +27,7 @@ COMPONENT CARRY_SELECT
 END COMPONENT;
 
 BEGIN
-	i1 : CARRY_SELECT PORT MAP (a => a, clk => clk, cin => cin, b => b, cout => cout, s => s);
+	i1 : CARRY_SELECT PORT MAP (a => a, cin => cin, b => b, cout => cout, s => s);
 
 Clock: PROCESS
 	BEGIN
