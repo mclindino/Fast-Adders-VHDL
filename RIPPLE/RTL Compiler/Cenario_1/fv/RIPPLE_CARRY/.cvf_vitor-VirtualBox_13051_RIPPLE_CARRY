@@ -1,0 +1,354 @@
+#Copyright notice: Copyright 1997-2010 Cadence Design Systems, Inc. All rights reserved worldwide.
+
+
+ovf_setup -ungroup_separator { _ }
+
+ovf_ungroup \
+-module { RIPPLE_CARRY } \
+-insmod { RIPPLE_CARRY_pow_rtli } \
+-instance { RIPPLE_CARRY_pow_rtlii } \
+-rename { \
+          { First_Adder First_Adder } \
+          { loop_generator[1].Adders loop_generator[1].Adders } \
+          { loop_generator[2].Adders loop_generator[2].Adders } \
+          { loop_generator[3].Adders loop_generator[3].Adders } \
+          { loop_generator[4].Adders loop_generator[4].Adders } \
+          { loop_generator[5].Adders loop_generator[5].Adders } \
+          { loop_generator[6].Adders loop_generator[6].Adders } \
+          { loop_generator[7].Adders loop_generator[7].Adders } \
+          { loop_generator[8].Adders loop_generator[8].Adders } \
+          { loop_generator[9].Adders loop_generator[9].Adders } \
+          { loop_generator[10].Adders loop_generator[10].Adders } \
+          { loop_generator[11].Adders loop_generator[11].Adders } \
+          { loop_generator[12].Adders loop_generator[12].Adders } \
+          { loop_generator[13].Adders loop_generator[13].Adders } \
+          { loop_generator[14].Adders loop_generator[14].Adders } \
+          { loop_generator[15].Adders loop_generator[15].Adders } \
+          { loop_generator[16].Adders loop_generator[16].Adders } \
+          { loop_generator[17].Adders loop_generator[17].Adders } \
+          { loop_generator[18].Adders loop_generator[18].Adders } \
+          { loop_generator[19].Adders loop_generator[19].Adders } \
+          { loop_generator[20].Adders loop_generator[20].Adders } \
+          { loop_generator[21].Adders loop_generator[21].Adders } \
+          { loop_generator[22].Adders loop_generator[22].Adders } \
+          { loop_generator[23].Adders loop_generator[23].Adders } \
+          { loop_generator[24].Adders loop_generator[24].Adders } \
+          { loop_generator[25].Adders loop_generator[25].Adders } \
+          { loop_generator[26].Adders loop_generator[26].Adders } \
+          { loop_generator[27].Adders loop_generator[27].Adders } \
+          { loop_generator[28].Adders loop_generator[28].Adders } \
+          { loop_generator[29].Adders loop_generator[29].Adders } \
+          { loop_generator[30].Adders loop_generator[30].Adders } \
+          { loop_generator[31].Adders loop_generator[31].Adders } \
+        } 
+ovf_uniquify \
+-module { RIPPLE_CARRY_pow_rtl_deri } \
+{ { loop_generator[1].Adders FULL_ADDER FULL_ADDER_31 } } 
+ovf_uniquify \
+-module { RIPPLE_CARRY_pow_rtl_deri } \
+{ { loop_generator[2].Adders FULL_ADDER FULL_ADDER_31 } } 
+ovf_uniquify \
+-module { RIPPLE_CARRY_pow_rtl_deri } \
+{ { loop_generator[3].Adders FULL_ADDER FULL_ADDER_31 } } 
+ovf_uniquify \
+-module { RIPPLE_CARRY_pow_rtl_deri } \
+{ { loop_generator[4].Adders FULL_ADDER FULL_ADDER_31 } } 
+ovf_uniquify \
+-module { RIPPLE_CARRY_pow_rtl_deri } \
+{ { loop_generator[5].Adders FULL_ADDER FULL_ADDER_31 } } 
+ovf_uniquify \
+-module { RIPPLE_CARRY_pow_rtl_deri } \
+{ { loop_generator[6].Adders FULL_ADDER FULL_ADDER_31 } } 
+ovf_uniquify \
+-module { RIPPLE_CARRY_pow_rtl_deri } \
+{ { loop_generator[7].Adders FULL_ADDER FULL_ADDER_31 } } 
+ovf_uniquify \
+-module { RIPPLE_CARRY_pow_rtl_deri } \
+{ { loop_generator[8].Adders FULL_ADDER FULL_ADDER_31 } } 
+ovf_uniquify \
+-module { RIPPLE_CARRY_pow_rtl_deri } \
+{ { loop_generator[9].Adders FULL_ADDER FULL_ADDER_31 } } 
+ovf_uniquify \
+-module { RIPPLE_CARRY_pow_rtl_deri } \
+{ { loop_generator[10].Adders FULL_ADDER FULL_ADDER_31 } } 
+ovf_uniquify \
+-module { RIPPLE_CARRY_pow_rtl_deri } \
+{ { loop_generator[11].Adders FULL_ADDER FULL_ADDER_31 } } 
+ovf_uniquify \
+-module { RIPPLE_CARRY_pow_rtl_deri } \
+{ { loop_generator[12].Adders FULL_ADDER FULL_ADDER_31 } } 
+ovf_uniquify \
+-module { RIPPLE_CARRY_pow_rtl_deri } \
+{ { loop_generator[13].Adders FULL_ADDER FULL_ADDER_31 } } 
+ovf_uniquify \
+-module { RIPPLE_CARRY_pow_rtl_deri } \
+{ { loop_generator[14].Adders FULL_ADDER FULL_ADDER_31 } } 
+ovf_uniquify \
+-module { RIPPLE_CARRY_pow_rtl_deri } \
+{ { loop_generator[15].Adders FULL_ADDER FULL_ADDER_31 } } 
+ovf_uniquify \
+-module { RIPPLE_CARRY_pow_rtl_deri } \
+{ { loop_generator[16].Adders FULL_ADDER FULL_ADDER_31 } } 
+ovf_uniquify \
+-module { RIPPLE_CARRY_pow_rtl_deri } \
+{ { loop_generator[17].Adders FULL_ADDER FULL_ADDER_31 } } 
+ovf_uniquify \
+-module { RIPPLE_CARRY_pow_rtl_deri } \
+{ { loop_generator[18].Adders FULL_ADDER FULL_ADDER_31 } } 
+ovf_uniquify \
+-module { RIPPLE_CARRY_pow_rtl_deri } \
+{ { loop_generator[19].Adders FULL_ADDER FULL_ADDER_31 } } 
+ovf_uniquify \
+-module { RIPPLE_CARRY_pow_rtl_deri } \
+{ { loop_generator[20].Adders FULL_ADDER FULL_ADDER_31 } } 
+ovf_uniquify \
+-module { RIPPLE_CARRY_pow_rtl_deri } \
+{ { loop_generator[21].Adders FULL_ADDER FULL_ADDER_31 } } 
+ovf_uniquify \
+-module { RIPPLE_CARRY_pow_rtl_deri } \
+{ { loop_generator[22].Adders FULL_ADDER FULL_ADDER_31 } } 
+ovf_uniquify \
+-module { RIPPLE_CARRY_pow_rtl_deri } \
+{ { loop_generator[23].Adders FULL_ADDER FULL_ADDER_31 } } 
+ovf_uniquify \
+-module { RIPPLE_CARRY_pow_rtl_deri } \
+{ { loop_generator[24].Adders FULL_ADDER FULL_ADDER_31 } } 
+ovf_uniquify \
+-module { RIPPLE_CARRY_pow_rtl_deri } \
+{ { loop_generator[25].Adders FULL_ADDER FULL_ADDER_31 } } 
+ovf_uniquify \
+-module { RIPPLE_CARRY_pow_rtl_deri } \
+{ { loop_generator[26].Adders FULL_ADDER FULL_ADDER_31 } } 
+ovf_uniquify \
+-module { RIPPLE_CARRY_pow_rtl_deri } \
+{ { loop_generator[27].Adders FULL_ADDER FULL_ADDER_31 } } 
+ovf_uniquify \
+-module { RIPPLE_CARRY_pow_rtl_deri } \
+{ { loop_generator[28].Adders FULL_ADDER FULL_ADDER_31 } } 
+ovf_uniquify \
+-module { RIPPLE_CARRY_pow_rtl_deri } \
+{ { loop_generator[29].Adders FULL_ADDER FULL_ADDER_31 } } 
+ovf_uniquify \
+-module { RIPPLE_CARRY_pow_rtl_deri } \
+{ { loop_generator[30].Adders FULL_ADDER FULL_ADDER_31 } } 
+ovf_uniquify \
+-module { RIPPLE_CARRY_pow_rtl_deri } \
+{ { loop_generator[31].Adders FULL_ADDER FULL_ADDER_31 } } 
+ovf_uniquify \
+-module { RIPPLE_CARRY_pow_rtl_deri } \
+{ { loop_generator[1].Adders FULL_ADDER_31 FULL_ADDER_1 } } 
+ovf_uniquify \
+-module { RIPPLE_CARRY_pow_rtl_deri } \
+{ { loop_generator[10].Adders FULL_ADDER_31 FULL_ADDER_10 } } 
+ovf_uniquify \
+-module { RIPPLE_CARRY_pow_rtl_deri } \
+{ { loop_generator[11].Adders FULL_ADDER_31 FULL_ADDER_11 } } 
+ovf_uniquify \
+-module { RIPPLE_CARRY_pow_rtl_deri } \
+{ { loop_generator[12].Adders FULL_ADDER_31 FULL_ADDER_12 } } 
+ovf_uniquify \
+-module { RIPPLE_CARRY_pow_rtl_deri } \
+{ { loop_generator[13].Adders FULL_ADDER_31 FULL_ADDER_13 } } 
+ovf_uniquify \
+-module { RIPPLE_CARRY_pow_rtl_deri } \
+{ { loop_generator[14].Adders FULL_ADDER_31 FULL_ADDER_14 } } 
+ovf_uniquify \
+-module { RIPPLE_CARRY_pow_rtl_deri } \
+{ { loop_generator[15].Adders FULL_ADDER_31 FULL_ADDER_15 } } 
+ovf_uniquify \
+-module { RIPPLE_CARRY_pow_rtl_deri } \
+{ { loop_generator[16].Adders FULL_ADDER_31 FULL_ADDER_16 } } 
+ovf_uniquify \
+-module { RIPPLE_CARRY_pow_rtl_deri } \
+{ { loop_generator[17].Adders FULL_ADDER_31 FULL_ADDER_17 } } 
+ovf_uniquify \
+-module { RIPPLE_CARRY_pow_rtl_deri } \
+{ { loop_generator[18].Adders FULL_ADDER_31 FULL_ADDER_18 } } 
+ovf_uniquify \
+-module { RIPPLE_CARRY_pow_rtl_deri } \
+{ { loop_generator[19].Adders FULL_ADDER_31 FULL_ADDER_19 } } 
+ovf_uniquify \
+-module { RIPPLE_CARRY_pow_rtl_deri } \
+{ { loop_generator[2].Adders FULL_ADDER_31 FULL_ADDER_2 } } 
+ovf_uniquify \
+-module { RIPPLE_CARRY_pow_rtl_deri } \
+{ { loop_generator[20].Adders FULL_ADDER_31 FULL_ADDER_20 } } 
+ovf_uniquify \
+-module { RIPPLE_CARRY_pow_rtl_deri } \
+{ { loop_generator[21].Adders FULL_ADDER_31 FULL_ADDER_21 } } 
+ovf_uniquify \
+-module { RIPPLE_CARRY_pow_rtl_deri } \
+{ { loop_generator[22].Adders FULL_ADDER_31 FULL_ADDER_22 } } 
+ovf_uniquify \
+-module { RIPPLE_CARRY_pow_rtl_deri } \
+{ { loop_generator[23].Adders FULL_ADDER_31 FULL_ADDER_23 } } 
+ovf_uniquify \
+-module { RIPPLE_CARRY_pow_rtl_deri } \
+{ { loop_generator[24].Adders FULL_ADDER_31 FULL_ADDER_24 } } 
+ovf_uniquify \
+-module { RIPPLE_CARRY_pow_rtl_deri } \
+{ { loop_generator[25].Adders FULL_ADDER_31 FULL_ADDER_25 } } 
+ovf_uniquify \
+-module { RIPPLE_CARRY_pow_rtl_deri } \
+{ { loop_generator[26].Adders FULL_ADDER_31 FULL_ADDER_26 } } 
+ovf_uniquify \
+-module { RIPPLE_CARRY_pow_rtl_deri } \
+{ { loop_generator[27].Adders FULL_ADDER_31 FULL_ADDER_27 } } 
+ovf_uniquify \
+-module { RIPPLE_CARRY_pow_rtl_deri } \
+{ { loop_generator[28].Adders FULL_ADDER_31 FULL_ADDER_28 } } 
+ovf_uniquify \
+-module { RIPPLE_CARRY_pow_rtl_deri } \
+{ { loop_generator[29].Adders FULL_ADDER_31 FULL_ADDER_29 } } 
+ovf_uniquify \
+-module { RIPPLE_CARRY_pow_rtl_deri } \
+{ { loop_generator[3].Adders FULL_ADDER_31 FULL_ADDER_3 } } 
+ovf_uniquify \
+-module { RIPPLE_CARRY_pow_rtl_deri } \
+{ { loop_generator[30].Adders FULL_ADDER_31 FULL_ADDER_30 } } 
+ovf_uniquify \
+-module { RIPPLE_CARRY_pow_rtl_deri } \
+{ { loop_generator[4].Adders FULL_ADDER_31 FULL_ADDER_4 } } 
+ovf_uniquify \
+-module { RIPPLE_CARRY_pow_rtl_deri } \
+{ { loop_generator[5].Adders FULL_ADDER_31 FULL_ADDER_5 } } 
+ovf_uniquify \
+-module { RIPPLE_CARRY_pow_rtl_deri } \
+{ { loop_generator[6].Adders FULL_ADDER_31 FULL_ADDER_6 } } 
+ovf_uniquify \
+-module { RIPPLE_CARRY_pow_rtl_deri } \
+{ { loop_generator[7].Adders FULL_ADDER_31 FULL_ADDER_7 } } 
+ovf_uniquify \
+-module { RIPPLE_CARRY_pow_rtl_deri } \
+{ { loop_generator[8].Adders FULL_ADDER_31 FULL_ADDER_8 } } 
+ovf_uniquify \
+-module { RIPPLE_CARRY_pow_rtl_deri } \
+{ { loop_generator[9].Adders FULL_ADDER_31 FULL_ADDER_9 } } 
+ovf_ungroup \
+-module { RIPPLE_CARRY } \
+-insmod { FULL_ADDER } \
+-instance { loop_generator[9].Adders } 
+ovf_ungroup \
+-module { RIPPLE_CARRY } \
+-insmod { FULL_ADDER } \
+-instance { loop_generator[8].Adders } 
+ovf_ungroup \
+-module { RIPPLE_CARRY } \
+-insmod { FULL_ADDER } \
+-instance { loop_generator[7].Adders } 
+ovf_ungroup \
+-module { RIPPLE_CARRY } \
+-insmod { FULL_ADDER } \
+-instance { loop_generator[6].Adders } 
+ovf_ungroup \
+-module { RIPPLE_CARRY } \
+-insmod { FULL_ADDER } \
+-instance { loop_generator[5].Adders } 
+ovf_ungroup \
+-module { RIPPLE_CARRY } \
+-insmod { FULL_ADDER } \
+-instance { loop_generator[4].Adders } 
+ovf_ungroup \
+-module { RIPPLE_CARRY } \
+-insmod { FULL_ADDER } \
+-instance { loop_generator[3].Adders } 
+ovf_ungroup \
+-module { RIPPLE_CARRY } \
+-insmod { FULL_ADDER } \
+-instance { loop_generator[31].Adders } 
+ovf_ungroup \
+-module { RIPPLE_CARRY } \
+-insmod { FULL_ADDER } \
+-instance { loop_generator[30].Adders } 
+ovf_ungroup \
+-module { RIPPLE_CARRY } \
+-insmod { FULL_ADDER } \
+-instance { loop_generator[2].Adders } 
+ovf_ungroup \
+-module { RIPPLE_CARRY } \
+-insmod { FULL_ADDER } \
+-instance { loop_generator[29].Adders } 
+ovf_ungroup \
+-module { RIPPLE_CARRY } \
+-insmod { FULL_ADDER } \
+-instance { loop_generator[28].Adders } 
+ovf_ungroup \
+-module { RIPPLE_CARRY } \
+-insmod { FULL_ADDER } \
+-instance { loop_generator[27].Adders } 
+ovf_ungroup \
+-module { RIPPLE_CARRY } \
+-insmod { FULL_ADDER } \
+-instance { loop_generator[26].Adders } 
+ovf_ungroup \
+-module { RIPPLE_CARRY } \
+-insmod { FULL_ADDER } \
+-instance { loop_generator[25].Adders } 
+ovf_ungroup \
+-module { RIPPLE_CARRY } \
+-insmod { FULL_ADDER } \
+-instance { loop_generator[24].Adders } 
+ovf_ungroup \
+-module { RIPPLE_CARRY } \
+-insmod { FULL_ADDER } \
+-instance { loop_generator[23].Adders } 
+ovf_ungroup \
+-module { RIPPLE_CARRY } \
+-insmod { FULL_ADDER } \
+-instance { loop_generator[22].Adders } 
+ovf_ungroup \
+-module { RIPPLE_CARRY } \
+-insmod { FULL_ADDER } \
+-instance { loop_generator[21].Adders } 
+ovf_ungroup \
+-module { RIPPLE_CARRY } \
+-insmod { FULL_ADDER } \
+-instance { loop_generator[20].Adders } 
+ovf_ungroup \
+-module { RIPPLE_CARRY } \
+-insmod { FULL_ADDER } \
+-instance { loop_generator[1].Adders } 
+ovf_ungroup \
+-module { RIPPLE_CARRY } \
+-insmod { FULL_ADDER } \
+-instance { loop_generator[19].Adders } 
+ovf_ungroup \
+-module { RIPPLE_CARRY } \
+-insmod { FULL_ADDER } \
+-instance { loop_generator[18].Adders } 
+ovf_ungroup \
+-module { RIPPLE_CARRY } \
+-insmod { FULL_ADDER } \
+-instance { loop_generator[17].Adders } 
+ovf_ungroup \
+-module { RIPPLE_CARRY } \
+-insmod { FULL_ADDER } \
+-instance { loop_generator[16].Adders } 
+ovf_ungroup \
+-module { RIPPLE_CARRY } \
+-insmod { FULL_ADDER } \
+-instance { loop_generator[15].Adders } 
+ovf_ungroup \
+-module { RIPPLE_CARRY } \
+-insmod { FULL_ADDER } \
+-instance { loop_generator[14].Adders } 
+ovf_ungroup \
+-module { RIPPLE_CARRY } \
+-insmod { FULL_ADDER } \
+-instance { loop_generator[13].Adders } 
+ovf_ungroup \
+-module { RIPPLE_CARRY } \
+-insmod { FULL_ADDER } \
+-instance { loop_generator[12].Adders } 
+ovf_ungroup \
+-module { RIPPLE_CARRY } \
+-insmod { FULL_ADDER } \
+-instance { loop_generator[11].Adders } 
+ovf_ungroup \
+-module { RIPPLE_CARRY } \
+-insmod { FULL_ADDER } \
+-instance { loop_generator[10].Adders } 
+ovf_ungroup \
+-module { RIPPLE_CARRY } \
+-insmod { FULL_ADDER } \
+-instance { First_Adder } 

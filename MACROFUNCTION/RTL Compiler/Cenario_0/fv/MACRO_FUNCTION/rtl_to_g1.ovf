@@ -1,0 +1,12 @@
+#Copyright notice: Copyright 1997-2010 Cadence Design Systems, Inc. All rights reserved worldwide.
+
+
+ovf_setup -ungroup_separator { _ }
+
+ovf_ungroup \
+-module { MACRO_FUNCTION } \
+-insmod { MACRO_FUNCTION_pow_rtli } \
+-instance { MACRO_FUNCTION_pow_rtlii } \
+-rename { \
+          { add_15_9 add_15_9 } \
+        } 

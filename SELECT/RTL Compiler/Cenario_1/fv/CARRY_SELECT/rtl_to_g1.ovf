@@ -1,0 +1,409 @@
+#Copyright notice: Copyright 1997-2010 Cadence Design Systems, Inc. All rights reserved worldwide.
+
+
+ovf_setup -ungroup_separator { _ }
+
+ovf_ungroup \
+-module { CARRY_SELECT } \
+-insmod { CARRY_SELECT_pow_rtli } \
+-instance { CARRY_SELECT_pow_rtlii } \
+-rename { \
+          { Block0 Block0 } \
+          { Block1 Block1 } \
+          { Block2 Block2 } \
+          { Block3 Block3 } \
+          { g1 g1 } \
+          { g2 g2 } \
+          { g3 g3 } \
+          { g4 g4 } \
+          { g5 g5 } \
+          { g6 g6 } \
+        } 
+ovf_uniquify \
+-module { SET_ADDERS } \
+{ { loop_generate_0[1].ADDER01 FULL_ADDER FULL_ADDER_63 } } 
+ovf_uniquify \
+-module { SET_ADDERS } \
+{ { loop_generate_0[2].ADDER01 FULL_ADDER FULL_ADDER_63 } } 
+ovf_uniquify \
+-module { SET_ADDERS } \
+{ { loop_generate_0[3].ADDER01 FULL_ADDER FULL_ADDER_63 } } 
+ovf_uniquify \
+-module { SET_ADDERS } \
+{ { loop_generate_0[4].ADDER01 FULL_ADDER FULL_ADDER_63 } } 
+ovf_uniquify \
+-module { SET_ADDERS } \
+{ { loop_generate_0[5].ADDER01 FULL_ADDER FULL_ADDER_63 } } 
+ovf_uniquify \
+-module { SET_ADDERS } \
+{ { loop_generate_0[6].ADDER01 FULL_ADDER FULL_ADDER_63 } } 
+ovf_uniquify \
+-module { SET_ADDERS } \
+{ { loop_generate_0[7].ADDER01 FULL_ADDER FULL_ADDER_63 } } 
+ovf_uniquify \
+-module { SET_ADDERS } \
+{ { loop_generate_1[1].ADDER11 FULL_ADDER FULL_ADDER_63 } } 
+ovf_uniquify \
+-module { SET_ADDERS } \
+{ { loop_generate_1[2].ADDER11 FULL_ADDER FULL_ADDER_63 } } 
+ovf_uniquify \
+-module { SET_ADDERS } \
+{ { loop_generate_1[3].ADDER11 FULL_ADDER FULL_ADDER_63 } } 
+ovf_uniquify \
+-module { SET_ADDERS } \
+{ { loop_generate_1[4].ADDER11 FULL_ADDER FULL_ADDER_63 } } 
+ovf_uniquify \
+-module { SET_ADDERS } \
+{ { loop_generate_1[5].ADDER11 FULL_ADDER FULL_ADDER_63 } } 
+ovf_uniquify \
+-module { SET_ADDERS } \
+{ { loop_generate_1[6].ADDER11 FULL_ADDER FULL_ADDER_63 } } 
+ovf_uniquify \
+-module { SET_ADDERS } \
+{ { loop_generate_1[7].ADDER11 FULL_ADDER FULL_ADDER_63 } } 
+ovf_uniquify \
+-module { SET_ADDERS } \
+{ { First10 FULL_ADDER FULL_ADDER_8 } } 
+ovf_uniquify \
+-module { CARRY_SELECT_pow_rtl_deri } \
+{ { Block1 SET_ADDERS SET_ADDERS_3 } } 
+ovf_uniquify \
+-module { CARRY_SELECT_pow_rtl_deri } \
+{ { Block2 SET_ADDERS SET_ADDERS_3 } } 
+ovf_uniquify \
+-module { CARRY_SELECT_pow_rtl_deri } \
+{ { Block3 SET_ADDERS SET_ADDERS_3 } } 
+ovf_uniquify \
+-module { SET_ADDERS } \
+{ { loop_generate_0[1].ADDER01 FULL_ADDER_63 FULL_ADDER_1 } } 
+ovf_uniquify \
+-module { SET_ADDERS } \
+{ { loop_generate_1[2].ADDER11 FULL_ADDER_63 FULL_ADDER_10 } } 
+ovf_uniquify \
+-module { SET_ADDERS } \
+{ { loop_generate_1[3].ADDER11 FULL_ADDER_63 FULL_ADDER_11 } } 
+ovf_uniquify \
+-module { SET_ADDERS } \
+{ { loop_generate_1[4].ADDER11 FULL_ADDER_63 FULL_ADDER_12 } } 
+ovf_uniquify \
+-module { SET_ADDERS } \
+{ { loop_generate_1[5].ADDER11 FULL_ADDER_63 FULL_ADDER_13 } } 
+ovf_uniquify \
+-module { SET_ADDERS } \
+{ { loop_generate_1[6].ADDER11 FULL_ADDER_63 FULL_ADDER_14 } } 
+ovf_uniquify \
+-module { CARRY_SELECT_pow_rtl_deri } \
+{ { Block1 SET_ADDERS_3 SET_ADDERS_1 } } 
+ovf_uniquify \
+-module { SET_ADDERS_1 } \
+{ { loop_generate_0[1].ADDER01 FULL_ADDER_63 FULL_ADDER_17 } } 
+ovf_uniquify \
+-module { SET_ADDERS_1 } \
+{ { loop_generate_0[2].ADDER01 FULL_ADDER_63 FULL_ADDER_18 } } 
+ovf_uniquify \
+-module { SET_ADDERS_1 } \
+{ { loop_generate_0[3].ADDER01 FULL_ADDER_63 FULL_ADDER_19 } } 
+ovf_uniquify \
+-module { SET_ADDERS } \
+{ { loop_generate_0[2].ADDER01 FULL_ADDER_63 FULL_ADDER_2 } } 
+ovf_uniquify \
+-module { SET_ADDERS_1 } \
+{ { loop_generate_0[4].ADDER01 FULL_ADDER_63 FULL_ADDER_20 } } 
+ovf_uniquify \
+-module { SET_ADDERS_1 } \
+{ { loop_generate_0[5].ADDER01 FULL_ADDER_63 FULL_ADDER_21 } } 
+ovf_uniquify \
+-module { SET_ADDERS_1 } \
+{ { loop_generate_0[6].ADDER01 FULL_ADDER_63 FULL_ADDER_22 } } 
+ovf_uniquify \
+-module { SET_ADDERS_1 } \
+{ { loop_generate_1[1].ADDER11 FULL_ADDER_63 FULL_ADDER_25 } } 
+ovf_uniquify \
+-module { SET_ADDERS_1 } \
+{ { loop_generate_1[2].ADDER11 FULL_ADDER_63 FULL_ADDER_26 } } 
+ovf_uniquify \
+-module { SET_ADDERS_1 } \
+{ { loop_generate_1[3].ADDER11 FULL_ADDER_63 FULL_ADDER_27 } } 
+ovf_uniquify \
+-module { SET_ADDERS_1 } \
+{ { loop_generate_1[4].ADDER11 FULL_ADDER_63 FULL_ADDER_28 } } 
+ovf_uniquify \
+-module { SET_ADDERS_1 } \
+{ { loop_generate_1[5].ADDER11 FULL_ADDER_63 FULL_ADDER_29 } } 
+ovf_uniquify \
+-module { SET_ADDERS } \
+{ { loop_generate_0[3].ADDER01 FULL_ADDER_63 FULL_ADDER_3 } } 
+ovf_uniquify \
+-module { SET_ADDERS_1 } \
+{ { loop_generate_1[6].ADDER11 FULL_ADDER_63 FULL_ADDER_30 } } 
+ovf_uniquify \
+-module { CARRY_SELECT_pow_rtl_deri } \
+{ { Block2 SET_ADDERS_3 SET_ADDERS_2 } } 
+ovf_uniquify \
+-module { SET_ADDERS_2 } \
+{ { loop_generate_0[1].ADDER01 FULL_ADDER_63 FULL_ADDER_33 } } 
+ovf_uniquify \
+-module { SET_ADDERS_2 } \
+{ { loop_generate_0[2].ADDER01 FULL_ADDER_63 FULL_ADDER_34 } } 
+ovf_uniquify \
+-module { SET_ADDERS_2 } \
+{ { loop_generate_0[3].ADDER01 FULL_ADDER_63 FULL_ADDER_35 } } 
+ovf_uniquify \
+-module { SET_ADDERS_2 } \
+{ { loop_generate_0[4].ADDER01 FULL_ADDER_63 FULL_ADDER_36 } } 
+ovf_uniquify \
+-module { SET_ADDERS_2 } \
+{ { loop_generate_0[5].ADDER01 FULL_ADDER_63 FULL_ADDER_37 } } 
+ovf_uniquify \
+-module { SET_ADDERS_2 } \
+{ { loop_generate_0[6].ADDER01 FULL_ADDER_63 FULL_ADDER_38 } } 
+ovf_uniquify \
+-module { SET_ADDERS } \
+{ { loop_generate_0[4].ADDER01 FULL_ADDER_63 FULL_ADDER_4 } } 
+ovf_uniquify \
+-module { SET_ADDERS_2 } \
+{ { loop_generate_1[1].ADDER11 FULL_ADDER_63 FULL_ADDER_41 } } 
+ovf_uniquify \
+-module { SET_ADDERS_2 } \
+{ { loop_generate_1[2].ADDER11 FULL_ADDER_63 FULL_ADDER_42 } } 
+ovf_uniquify \
+-module { SET_ADDERS_2 } \
+{ { loop_generate_1[3].ADDER11 FULL_ADDER_63 FULL_ADDER_43 } } 
+ovf_uniquify \
+-module { SET_ADDERS_2 } \
+{ { loop_generate_1[4].ADDER11 FULL_ADDER_63 FULL_ADDER_44 } } 
+ovf_uniquify \
+-module { SET_ADDERS_2 } \
+{ { loop_generate_1[5].ADDER11 FULL_ADDER_63 FULL_ADDER_45 } } 
+ovf_uniquify \
+-module { SET_ADDERS_2 } \
+{ { loop_generate_1[6].ADDER11 FULL_ADDER_63 FULL_ADDER_46 } } 
+ovf_uniquify \
+-module { SET_ADDERS_3 } \
+{ { loop_generate_0[1].ADDER01 FULL_ADDER_63 FULL_ADDER_49 } } 
+ovf_uniquify \
+-module { SET_ADDERS } \
+{ { loop_generate_0[5].ADDER01 FULL_ADDER_63 FULL_ADDER_5 } } 
+ovf_uniquify \
+-module { SET_ADDERS_3 } \
+{ { loop_generate_0[2].ADDER01 FULL_ADDER_63 FULL_ADDER_50 } } 
+ovf_uniquify \
+-module { SET_ADDERS_3 } \
+{ { loop_generate_0[3].ADDER01 FULL_ADDER_63 FULL_ADDER_51 } } 
+ovf_uniquify \
+-module { SET_ADDERS_3 } \
+{ { loop_generate_0[4].ADDER01 FULL_ADDER_63 FULL_ADDER_52 } } 
+ovf_uniquify \
+-module { SET_ADDERS_3 } \
+{ { loop_generate_0[5].ADDER01 FULL_ADDER_63 FULL_ADDER_53 } } 
+ovf_uniquify \
+-module { SET_ADDERS_3 } \
+{ { loop_generate_0[6].ADDER01 FULL_ADDER_63 FULL_ADDER_54 } } 
+ovf_uniquify \
+-module { SET_ADDERS_3 } \
+{ { loop_generate_1[1].ADDER11 FULL_ADDER_63 FULL_ADDER_57 } } 
+ovf_uniquify \
+-module { SET_ADDERS_3 } \
+{ { loop_generate_1[2].ADDER11 FULL_ADDER_63 FULL_ADDER_58 } } 
+ovf_uniquify \
+-module { SET_ADDERS_3 } \
+{ { loop_generate_1[3].ADDER11 FULL_ADDER_63 FULL_ADDER_59 } } 
+ovf_uniquify \
+-module { SET_ADDERS } \
+{ { loop_generate_0[6].ADDER01 FULL_ADDER_63 FULL_ADDER_6 } } 
+ovf_uniquify \
+-module { SET_ADDERS_3 } \
+{ { loop_generate_1[4].ADDER11 FULL_ADDER_63 FULL_ADDER_60 } } 
+ovf_uniquify \
+-module { SET_ADDERS_3 } \
+{ { loop_generate_1[5].ADDER11 FULL_ADDER_63 FULL_ADDER_61 } } 
+ovf_uniquify \
+-module { SET_ADDERS_3 } \
+{ { loop_generate_1[6].ADDER11 FULL_ADDER_63 FULL_ADDER_62 } } 
+ovf_uniquify \
+-module { SET_ADDERS } \
+{ { loop_generate_1[1].ADDER11 FULL_ADDER_63 FULL_ADDER_9 } } 
+ovf_uniquify \
+-module { SET_ADDERS_2 } \
+{ { First10 FULL_ADDER_8 FULL_ADDER_56 } } 
+ovf_uniquify \
+-module { SET_ADDERS_3 } \
+{ { First10 FULL_ADDER_8 FULL_ADDER_56 } } 
+ovf_uniquify \
+-module { SET_ADDERS_3 } \
+{ { First00 FULL_ADDER FULL_ADDER_32 } } 
+ovf_uniquify \
+-module { SET_ADDERS_2 } \
+{ { First00 FULL_ADDER FULL_ADDER_32 } } 
+ovf_uniquify \
+-module { SET_ADDERS } \
+{ { loop_generate_0[7].ADDER01 FULL_ADDER_63 FULL_ADDER_47 } } 
+ovf_uniquify \
+-module { SET_ADDERS } \
+{ { loop_generate_1[7].ADDER11 FULL_ADDER_63 FULL_ADDER_47 } } 
+ovf_uniquify \
+-module { SET_ADDERS_1 } \
+{ { loop_generate_0[7].ADDER01 FULL_ADDER_63 FULL_ADDER_47 } } 
+ovf_uniquify \
+-module { SET_ADDERS_1 } \
+{ { loop_generate_1[7].ADDER11 FULL_ADDER_63 FULL_ADDER_47 } } 
+ovf_uniquify \
+-module { SET_ADDERS_2 } \
+{ { loop_generate_1[7].ADDER11 FULL_ADDER_63 FULL_ADDER_47 } } 
+ovf_uniquify \
+-module { SET_ADDERS } \
+{ { loop_generate_0[7].ADDER01 FULL_ADDER_47 FULL_ADDER_15 } } 
+ovf_uniquify \
+-module { SET_ADDERS } \
+{ { loop_generate_1[7].ADDER11 FULL_ADDER_47 FULL_ADDER_15 } } 
+ovf_uniquify \
+-module { SET_ADDERS_2 } \
+{ { loop_generate_0[7].ADDER01 FULL_ADDER_63 FULL_ADDER_39 } } 
+ovf_uniquify \
+-module { SET_ADDERS_1 } \
+{ { First00 FULL_ADDER FULL_ADDER_16 } } 
+ovf_uniquify \
+-module { SET_ADDERS_1 } \
+{ { First10 FULL_ADDER_8 FULL_ADDER_24 } } 
+ovf_uniquify \
+-module { SET_ADDERS } \
+{ { loop_generate_0[7].ADDER01 FULL_ADDER_15 FULL_ADDER_7 } } 
+ovf_uniquify \
+-module { SET_ADDERS_1 } \
+{ { loop_generate_0[7].ADDER01 FULL_ADDER_47 FULL_ADDER_23 } } 
+ovf_uniquify \
+-module { SET_ADDERS_1 } \
+{ { loop_generate_1[7].ADDER11 FULL_ADDER_47 FULL_ADDER_31 } } 
+ovf_uniquify \
+-module { SET_ADDERS_3 } \
+{ { First00 FULL_ADDER_32 FULL_ADDER_48 } } 
+ovf_uniquify \
+-module { SET_ADDERS_2 } \
+{ { First10 FULL_ADDER_56 FULL_ADDER_40 } } 
+ovf_uniquify \
+-module { SET_ADDERS_3 } \
+{ { loop_generate_0[7].ADDER01 FULL_ADDER_63 FULL_ADDER_55 } } 
+ovf_uniquify \
+-module { SET_ADDERS } \
+{ { loop_generate_0[1].ADDER01 FULL_ADDER FULL_ADDER_7 } } 
+ovf_uniquify \
+-module { SET_ADDERS } \
+{ { loop_generate_0[2].ADDER01 FULL_ADDER FULL_ADDER_7 } } 
+ovf_uniquify \
+-module { SET_ADDERS } \
+{ { loop_generate_0[3].ADDER01 FULL_ADDER FULL_ADDER_7 } } 
+ovf_uniquify \
+-module { SET_ADDERS } \
+{ { loop_generate_0[4].ADDER01 FULL_ADDER FULL_ADDER_7 } } 
+ovf_uniquify \
+-module { SET_ADDERS } \
+{ { loop_generate_0[5].ADDER01 FULL_ADDER FULL_ADDER_7 } } 
+ovf_uniquify \
+-module { SET_ADDERS } \
+{ { loop_generate_0[6].ADDER01 FULL_ADDER FULL_ADDER_7 } } 
+ovf_uniquify \
+-module { SET_ADDERS } \
+{ { loop_generate_0[7].ADDER01 FULL_ADDER FULL_ADDER_7 } } 
+ovf_uniquify \
+-module { SET_ADDERS } \
+{ { loop_generate_1[1].ADDER11 FULL_ADDER FULL_ADDER_7 } } 
+ovf_uniquify \
+-module { SET_ADDERS } \
+{ { loop_generate_1[2].ADDER11 FULL_ADDER FULL_ADDER_7 } } 
+ovf_uniquify \
+-module { SET_ADDERS } \
+{ { loop_generate_1[3].ADDER11 FULL_ADDER FULL_ADDER_7 } } 
+ovf_uniquify \
+-module { SET_ADDERS } \
+{ { loop_generate_1[4].ADDER11 FULL_ADDER FULL_ADDER_7 } } 
+ovf_uniquify \
+-module { SET_ADDERS } \
+{ { loop_generate_1[5].ADDER11 FULL_ADDER FULL_ADDER_7 } } 
+ovf_uniquify \
+-module { SET_ADDERS } \
+{ { loop_generate_1[6].ADDER11 FULL_ADDER FULL_ADDER_7 } } 
+ovf_uniquify \
+-module { SET_ADDERS } \
+{ { loop_generate_1[7].ADDER11 FULL_ADDER FULL_ADDER_7 } } 
+ovf_uniquify \
+-module { SET_ADDERS } \
+{ { First10 FULL_ADDER FULL_ADDER_63 } } 
+ovf_ungroup \
+-module { SET_ADDERS } \
+-insmod { FULL_ADDER_7 } \
+-instance { loop_generate_0[1].ADDER01 } 
+ovf_ungroup \
+-module { SET_ADDERS } \
+-insmod { FULL_ADDER_7 } \
+-instance { loop_generate_0[2].ADDER01 } 
+ovf_ungroup \
+-module { SET_ADDERS } \
+-insmod { FULL_ADDER_7 } \
+-instance { loop_generate_0[3].ADDER01 } 
+ovf_ungroup \
+-module { SET_ADDERS } \
+-insmod { FULL_ADDER_7 } \
+-instance { loop_generate_0[4].ADDER01 } 
+ovf_ungroup \
+-module { SET_ADDERS } \
+-insmod { FULL_ADDER_7 } \
+-instance { loop_generate_0[5].ADDER01 } 
+ovf_ungroup \
+-module { SET_ADDERS } \
+-insmod { FULL_ADDER_7 } \
+-instance { loop_generate_0[6].ADDER01 } 
+ovf_ungroup \
+-module { SET_ADDERS } \
+-insmod { FULL_ADDER_7 } \
+-instance { loop_generate_0[7].ADDER01 } 
+ovf_ungroup \
+-module { SET_ADDERS } \
+-insmod { FULL_ADDER_7 } \
+-instance { loop_generate_1[1].ADDER11 } 
+ovf_ungroup \
+-module { SET_ADDERS } \
+-insmod { FULL_ADDER_7 } \
+-instance { loop_generate_1[2].ADDER11 } 
+ovf_ungroup \
+-module { SET_ADDERS } \
+-insmod { FULL_ADDER_7 } \
+-instance { loop_generate_1[3].ADDER11 } 
+ovf_ungroup \
+-module { SET_ADDERS } \
+-insmod { FULL_ADDER_7 } \
+-instance { loop_generate_1[4].ADDER11 } 
+ovf_ungroup \
+-module { SET_ADDERS } \
+-insmod { FULL_ADDER_7 } \
+-instance { loop_generate_1[5].ADDER11 } 
+ovf_ungroup \
+-module { SET_ADDERS } \
+-insmod { FULL_ADDER_7 } \
+-instance { loop_generate_1[6].ADDER11 } 
+ovf_ungroup \
+-module { SET_ADDERS } \
+-insmod { FULL_ADDER_7 } \
+-instance { loop_generate_1[7].ADDER11 } 
+ovf_ungroup \
+-module { SET_ADDERS } \
+-insmod { FULL_ADDER_63 } \
+-instance { First10 } 
+ovf_ungroup \
+-module { SET_ADDERS } \
+-insmod { FULL_ADDER } \
+-instance { First00 } 
+ovf_uniquify \
+-module { CARRY_SELECT } \
+{ { Block1 SET_ADDERS SET_ADDERS_4 } } 
+ovf_uniquify \
+-module { CARRY_SELECT } \
+{ { Block2 SET_ADDERS SET_ADDERS_4 } } 
+ovf_uniquify \
+-module { CARRY_SELECT } \
+{ { Block3 SET_ADDERS SET_ADDERS_4 } } 
+ovf_uniquify \
+-module { CARRY_SELECT } \
+{ { Block2 SET_ADDERS_4 SET_ADDERS_5 } } 
+ovf_uniquify \
+-module { CARRY_SELECT } \
+{ { Block1 SET_ADDERS_4 SET_ADDERS_6 } } 

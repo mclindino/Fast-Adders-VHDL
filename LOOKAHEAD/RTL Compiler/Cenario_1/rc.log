@@ -1,0 +1,1399 @@
+Checking out license 'RTL_Compiler_Ultra'... (1 second elapsed)
+Reading GUI preferences file '/home/vitor/.cadence/rc.gui'.
+
+                       Cadence Encounter(R) RTL Compiler
+          Version RC11.10 - v11.10-p005_1 (64-bit), built Nov 10 2011
+
+
+Copyright notice: Copyright 1997-2011 Cadence Design Systems, Inc. All rights 
+reserved worldwide. 
+
+Patent notices: Protected by U.S. Patents: 5892687; 6470486; 6772398; 6772399; 
+6807651; 6832357; 7007247 
+
+WARNING: This version of RC is 2881 days old.
+         Visit downloads.cadence.com for the latest release of RC.
+
+
+================================================================================
+                  Welcome to Cadence Encounter(R) RTL Compiler
+
+Here is a quick introduction on how to access our product information.  
+If you do not want this message to appear in the future, create an 
+initialization file (an empty file will do) in your home directory 
+called '~/.cadence/.synth_init'.
+
+  To access the product documentation in HTML and PDF, type 'cdnshelp'
+    at the system prompt. 
+  For a list of available commands, type 'help'. 
+  To view a man page for a command, type 'man <commandName>'.
+  To view a man page for an error message, type 'man <messageID>'.
+  For a list of all possible object types, type 'get_attribute -help'.
+  For a list of all available attributes by object type, type
+    'get_attribute * <object_type> -help'.
+  For a list of all attributes for every object type, type
+    'get_attribute * * -help'
+  To list only writable attributes, substitute 'get_attribute' with
+    'set_attribute'.
+  To get a template script to run RTL Compiler, use the 'write_template'
+    command.
+  To get a template script to run Conformal based on the current RTL
+    Compiler session, use the 'write_do_lec' command.
+  
+  Obsolete attributes in the current tool version.
+  To learn more, type 'get_attribute -help <attribute> <object>'.
+
+       object  attribute
+       ------  ---------
+       design  dp_perform_rewriting_operations
+       design  lp_optimize_dynamic_power_first
+       design  name_mapping_record_name_changes
+       design  name_mapping_version
+       design  output_name_mapping_file
+     instance  black_box
+     instance  dft_inherited_dont_scan
+     instance  inherited_default_power_domain
+      libcell  black_box
+      libcell  location
+          net  logic0_driven
+          net  logic1_driven
+          pin  inherited_default_power_domain
+         port  inherited_default_power_domain
+         root  auto_ungroup_min_effort
+         root  degenerate_complex_seqs
+         root  dp_area_mode
+         root  dp_perform_csa_operations
+         root  dp_perform_rewriting_operations
+         root  dp_perform_sharing_operations
+         root  dp_perform_speculation_operations
+         root  exact_match_seqs_async_controls
+         root  hdl_array_generator
+         root  hdl_flatten_array
+         root  hdl_old_reg_naming
+         root  hdl_record_generator
+         root  hdl_reg_naming_style_scalar
+         root  hdl_reg_naming_style_vector
+         root  hdl_trim_target_index
+         root  hdl_vector_naming_style
+         root  ignore_unknown_embedded_commands
+         root  lbr_async_clr_pre_seqs_interchangable
+         root  ple_parameter_source_priority
+         root  pqos_virtual_buffer
+         root  retime_preserve_state_points
+         root  wlec_env_var
+         root  wlec_flat_r2n
+         root  wlec_no_exit
+         root  wlec_old_lp_ec_flow
+         root  wlec_save_ssion
+         root  wlec_sim_lib
+         root  wlec_sim_plus_lib
+         root  wlec_skip_iso_check_hier_compare
+         root  wlec_skip_lvl_check_hier_compare
+         root  wlec_verbose
+    subdesign  allow_csa_subdesign
+    subdesign  allow_sharing_subdesign
+    subdesign  allow_speculation_subdesign
+    subdesign  auto_ungroup_ok
+    subdesign  dp_perform_rewriting_operations
+
+Send us feedback at rc_feedback@cadence.com.
+================================================================================
+
+Sourcing '../scripts/script.tcl' (Mon Sep 30 14:52:47 -0300 2019)...
+model name	: Intel(R) Core(TM) i5-7500 CPU @ 3.40GHz
+model name	: Intel(R) Core(TM) i5-7500 CPU @ 3.40GHz
+cpu MHz		: 3408.000
+cpu MHz		: 3408.000
+Hostname : vitor-VirtualBox
+Sourcing '/home/vitor/Desktop/cadence/RC11.10/tools.lnx86/lib/etc/load_etc.tcl' (Mon Sep 30 14:52:47 -0300 2019)...
+Sourcing '/home/vitor/Desktop/cadence/RC11.10/tools.lnx86/lib/etc/toolbox/insert_io_buffers.tcl' (Mon Sep 30 14:52:47 -0300 2019)...
+Sourcing '/home/vitor/Desktop/cadence/RC11.10/tools.lnx86/lib/etc/toolbox/performance_statistics.tcl' (Mon Sep 30 14:52:47 -0300 2019)...
+
+
+  Setting attribute of root '/': 'lib_search_path' = . /home/vitor/Desktop/cadence/Library/NangateOpenCellLib_45nm/Front_End/Liberty/ECSM/ /home/vitor/Desktop/cadence/Library/NangateOpenCellLib_45nm/Back_End/lef/
+  Setting attribute of root '/': 'script_search_path' =  ../scripts
+  Setting attribute of root '/': 'hdl_search_path' =  ../rtl  
+  Setting attribute of root '/': 'wireload_mode' = top
+  Setting attribute of root '/': 'information_level' = 9
+  Setting attribute of root '/': 'lp_power_unit' = mW
+Info   : Enabled hdl_track_file_row_column attribute.
+       : Setting this attribute to 'true' can have an impact on the run time. Use this attribute only when filename, line number, and column information are needed in reports.
+  Setting attribute of root '/': 'hdl_track_filename_row_col' = true
+            Reading file '/home/vitor/Desktop/cadence/Library/NangateOpenCellLib_45nm/Front_End/Liberty/ECSM//NangateOpenCellLibrary_worst_low_ecsm.lib'
+    Loading library NangateOpenCellLibrary_worst_low_ecsm.lib
+Info    : An unsupported construct was detected in this library. [LBR-40]
+        : NangateOpenCellLibrary_worst_low_ecsm.lib:48:18: Construct 'library_features' is not supported.
+        : Check to see if this construct is really needed for synthesis.  Many liberty constructs are not actually required.
+Info    : An unsupported construct was detected in this library. [LBR-40]
+        : NangateOpenCellLibrary_worst_low_ecsm.lib:66:8: Construct 'define' is not supported.
+Info    : An unsupported construct was detected in this library. [LBR-40]
+        : NangateOpenCellLibrary_worst_low_ecsm.lib:96:14: Construct 'define_group' is not supported.
+Info    : Found 'statetable' group in cell. [LBR-83]
+        : The 'statetable' group in cell 'CLKGATETST_X1', in file 'NangateOpenCellLibrary_worst_low_ecsm.lib', at line 170415, column 22.
+        : Currently, state tables are only supported for scan cells for the clocked LSSD scan style and for clock-gating cells whose Liberty attribute 'clock_gating_integrated_cell' is set to 'generic'.
+Info    : Found 'statetable' group in cell. [LBR-83]
+        : The 'statetable' group in cell 'CLKGATETST_X2', in file 'NangateOpenCellLibrary_worst_low_ecsm.lib', at line 172655, column 22.
+Info    : Found 'statetable' group in cell. [LBR-83]
+        : The 'statetable' group in cell 'CLKGATETST_X4', in file 'NangateOpenCellLibrary_worst_low_ecsm.lib', at line 174895, column 22.
+Info    : Found 'statetable' group in cell. [LBR-83]
+        : The 'statetable' group in cell 'CLKGATETST_X8', in file 'NangateOpenCellLibrary_worst_low_ecsm.lib', at line 177135, column 22.
+Info    : Found 'statetable' group in cell. [LBR-83]
+        : The 'statetable' group in cell 'CLKGATE_X1', in file 'NangateOpenCellLibrary_worst_low_ecsm.lib', at line 179375, column 19.
+Info    : Found 'statetable' group in cell. [LBR-83]
+        : The 'statetable' group in cell 'CLKGATE_X2', in file 'NangateOpenCellLibrary_worst_low_ecsm.lib', at line 180367, column 19.
+Info    : Found 'statetable' group in cell. [LBR-83]
+        : The 'statetable' group in cell 'CLKGATE_X4', in file 'NangateOpenCellLibrary_worst_low_ecsm.lib', at line 181359, column 19.
+Info    : Found 'statetable' group in cell. [LBR-83]
+        : The 'statetable' group in cell 'CLKGATE_X8', in file 'NangateOpenCellLibrary_worst_low_ecsm.lib', at line 182351, column 19.
+Info    : Created nominal operating condition. [LBR-412]
+        : Operating condition '_nominal_' was created for the PVT values (1.000000, 0.950000, -40.000000) in library 'NangateOpenCellLibrary_worst_low_ecsm.lib'.
+        : The nominal operating condition represents either the nominal PVT values if specified in the library source, or the default PVT values (1.0, 1.0, 1.0).
+        Cell 'ANTENNA_X1' has no outputs.
+        Cell 'ANTENNA_X1' has no outputs.
+        Cell 'FILLCELL_X1' has no outputs.
+        Cell 'FILLCELL_X1' has no outputs.
+        Cell 'FILLCELL_X2' has no outputs.
+        Cell 'FILLCELL_X2' has no outputs.
+        Cell 'FILLCELL_X4' has no outputs.
+        Cell 'FILLCELL_X4' has no outputs.
+        Cell 'FILLCELL_X8' has no outputs.
+        Cell 'FILLCELL_X8' has no outputs.
+        Cell 'FILLCELL_X16' has no outputs.
+        Cell 'FILLCELL_X16' has no outputs.
+        Cell 'FILLCELL_X32' has no outputs.
+        Cell 'FILLCELL_X32' has no outputs.
+Info    : Library Information. [LBR-415]
+        : Library: 'NangateOpenCellLibrary_worst_low_ecsm.lib', Total cells: '134', Usable cells: '116', Unusable cells: '18'.
+	List of unusable cells: 'ANTENNA_X1 CLKGATETST_X1 CLKGATETST_X2 CLKGATETST_X4 CLKGATETST_X8 CLKGATE_X1 CLKGATE_X2 CLKGATE_X4 CLKGATE_X8 FILLCELL_X1 FILLCELL_X2 FILLCELL_X4 FILLCELL_X8 FILLCELL_X16 FILLCELL_X32 LOGIC0_X1 LOGIC1_X1 TLAT_X1 .'
+        : The number of unusable cells that is listed depends on the setting of the 'information_level' root attribute. If set to a value less than 6, the list is limited to 10 unusable cells. If set to a value equal to or higher than 6, all unusable cells are listed.
+  Setting attribute of root '/': 'library' = NangateOpenCellLibrary_worst_low_ecsm.lib
+Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
+        : Via 'via1_4' has no resistance value.
+Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
+        : Via 'via1_0' has no resistance value.
+Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
+        : Via 'via1_1' has no resistance value.
+Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
+        : Via 'via1_2' has no resistance value.
+Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
+        : Via 'via1_3' has no resistance value.
+Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
+        : Via 'via1_5' has no resistance value.
+Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
+        : Via 'via1_6' has no resistance value.
+Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
+        : Via 'via1_7' has no resistance value.
+Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
+        : Via 'via1_8' has no resistance value.
+Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
+        : Via 'via2_8' has no resistance value.
+Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
+        : Via 'via2_4' has no resistance value.
+Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
+        : Via 'via2_5' has no resistance value.
+Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
+        : Via 'via2_7' has no resistance value.
+Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
+        : Via 'via2_6' has no resistance value.
+Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
+        : Via 'via2_0' has no resistance value.
+Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
+        : Via 'via2_1' has no resistance value.
+Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
+        : Via 'via2_2' has no resistance value.
+Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
+        : Via 'via2_3' has no resistance value.
+Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
+        : Via 'via3_2' has no resistance value.
+Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
+        : Via 'via3_0' has no resistance value.
+Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
+        : Via 'via3_1' has no resistance value.
+Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
+        : Via 'via4_0' has no resistance value.
+Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
+        : Via 'via5_0' has no resistance value.
+Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
+        : Via 'via6_0' has no resistance value.
+Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
+        : Via 'via7_0' has no resistance value.
+Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
+        : Via 'via8_0' has no resistance value.
+Info    : Via with no resistance will have a value of '0.0' assigned. [PHYS-129]
+        : Via 'via9_0' has no resistance value.
+Warning : MASTERSLICE layer found after ROUTING or CUT layer. [PHYS-120]
+        : MASTERSLICE layer 'poly' is defined after ROUTING layer 'metal10'.
+        : Masterslice layers are typically polysilicon layers. You must define layers in process order from bottom to top. Correct the layer order in the LEF file.
+Warning : MASTERSLICE layer found after ROUTING or CUT layer. [PHYS-120]
+        : MASTERSLICE layer 'active' is defined after ROUTING layer 'metal10'.
+Warning : Routing layers are defined in previous LEF file already. [PHYS-109]
+        : Routing layers are defined already, this layer 'metal1' in file '/home/vitor/Desktop/cadence/Library/NangateOpenCellLib_45nm/Back_End/lef//NangateOpenCellLibrary.lef' is ignored.
+Warning : Routing layers are defined in previous LEF file already. [PHYS-109]
+        : Routing layers are defined already, this layer 'metal2' in file '/home/vitor/Desktop/cadence/Library/NangateOpenCellLib_45nm/Back_End/lef//NangateOpenCellLibrary.lef' is ignored.
+Warning : Routing layers are defined in previous LEF file already. [PHYS-109]
+        : Routing layers are defined already, this layer 'metal3' in file '/home/vitor/Desktop/cadence/Library/NangateOpenCellLib_45nm/Back_End/lef//NangateOpenCellLibrary.lef' is ignored.
+Warning : Routing layers are defined in previous LEF file already. [PHYS-109]
+        : Routing layers are defined already, this layer 'metal4' in file '/home/vitor/Desktop/cadence/Library/NangateOpenCellLib_45nm/Back_End/lef//NangateOpenCellLibrary.lef' is ignored.
+Warning : Routing layers are defined in previous LEF file already. [PHYS-109]
+        : Routing layers are defined already, this layer 'metal5' in file '/home/vitor/Desktop/cadence/Library/NangateOpenCellLib_45nm/Back_End/lef//NangateOpenCellLibrary.lef' is ignored.
+Warning : Routing layers are defined in previous LEF file already. [PHYS-109]
+        : Routing layers are defined already, this layer 'metal6' in file '/home/vitor/Desktop/cadence/Library/NangateOpenCellLib_45nm/Back_End/lef//NangateOpenCellLibrary.lef' is ignored.
+Warning : Routing layers are defined in previous LEF file already. [PHYS-109]
+        : Routing layers are defined already, this layer 'metal7' in file '/home/vitor/Desktop/cadence/Library/NangateOpenCellLib_45nm/Back_End/lef//NangateOpenCellLibrary.lef' is ignored.
+Warning : Routing layers are defined in previous LEF file already. [PHYS-109]
+        : Routing layers are defined already, this layer 'metal8' in file '/home/vitor/Desktop/cadence/Library/NangateOpenCellLib_45nm/Back_End/lef//NangateOpenCellLibrary.lef' is ignored.
+Warning : Routing layers are defined in previous LEF file already. [PHYS-109]
+        : Routing layers are defined already, this layer 'metal9' in file '/home/vitor/Desktop/cadence/Library/NangateOpenCellLib_45nm/Back_End/lef//NangateOpenCellLibrary.lef' is ignored.
+Warning : Routing layers are defined in previous LEF file already. [PHYS-109]
+        : Routing layers are defined already, this layer 'metal10' in file '/home/vitor/Desktop/cadence/Library/NangateOpenCellLib_45nm/Back_End/lef//NangateOpenCellLibrary.lef' is ignored.
+Warning : Site already defined before, duplicated site will be ignored. [PHYS-106]
+        : Site 'FreePDK45_38x28_10R_NP_162NW_34O' read already, this site in file '/home/vitor/Desktop/cadence/Library/NangateOpenCellLib_45nm/Back_End/lef//NangateOpenCellLibrary.lef' is ignored.
+
+  According to lef_library, there are total 10 routing layers [ V(5) / H(5) ]
+
+Warning : The variant range of wire parameters is too large. [PHYS-12]
+        : The variant range (0.07, 0.8) of 'WIDTH' for layers 'metal3' and 'metal9' is too large.
+        : Make sure to check the consistency of the parameters.
+Warning : The variant range of wire parameters is too large. [PHYS-12]
+        : The variant range (0.14, 1.6) of 'PITCH' for layers 'metal3' and 'metal9' is too large.
+Info    : Library Information. [LBR-415]
+        : Library: 'NangateOpenCellLibrary_worst_low_ecsm.lib', Total cells: '134', Usable cells: '116', Unusable cells: '18'.
+	List of unusable cells: 'ANTENNA_X1 CLKGATETST_X1 CLKGATETST_X2 CLKGATETST_X4 CLKGATETST_X8 CLKGATE_X1 CLKGATE_X2 CLKGATE_X4 CLKGATE_X8 FILLCELL_X1 FILLCELL_X2 FILLCELL_X4 FILLCELL_X8 FILLCELL_X16 FILLCELL_X32 LOGIC0_X1 LOGIC1_X1 TLAT_X1 .'
+Info    : Detected an unsupported timing arc type. [LBR-72]
+        : Timing arc 'min_pulse_width' between libpins 'CK' and 'CK' on libcell 'CLKGATETST_X1' is ignored. Hold timing analysis and optimization are not supported.
+        : Refer to 'Supported Liberty timing_type Values' in 'Setting Constraints and Performing Timing Analysis Using Encounter RTL Compiler' for more information.
+Info    : Detected an unsupported timing arc type. [LBR-72]
+        : Timing arc 'min_pulse_width' between libpins 'CK' and 'CK' on libcell 'CLKGATETST_X2' is ignored. Hold timing analysis and optimization are not supported.
+Info    : Detected an unsupported timing arc type. [LBR-72]
+        : Timing arc 'min_pulse_width' between libpins 'CK' and 'CK' on libcell 'CLKGATETST_X4' is ignored. Hold timing analysis and optimization are not supported.
+Info    : Detected an unsupported timing arc type. [LBR-72]
+        : Timing arc 'min_pulse_width' between libpins 'CK' and 'CK' on libcell 'CLKGATETST_X8' is ignored. Hold timing analysis and optimization are not supported.
+Info    : Detected an unsupported timing arc type. [LBR-72]
+        : Timing arc 'min_pulse_width' between libpins 'CK' and 'CK' on libcell 'CLKGATE_X1' is ignored. Hold timing analysis and optimization are not supported.
+Info    : Detected an unsupported timing arc type. [LBR-72]
+        : Timing arc 'min_pulse_width' between libpins 'CK' and 'CK' on libcell 'CLKGATE_X2' is ignored. Hold timing analysis and optimization are not supported.
+Info    : Detected an unsupported timing arc type. [LBR-72]
+        : Timing arc 'min_pulse_width' between libpins 'CK' and 'CK' on libcell 'CLKGATE_X4' is ignored. Hold timing analysis and optimization are not supported.
+Info    : Detected an unsupported timing arc type. [LBR-72]
+        : Timing arc 'min_pulse_width' between libpins 'CK' and 'CK' on libcell 'CLKGATE_X8' is ignored. Hold timing analysis and optimization are not supported.
+Info    : Detected an unsupported timing arc type. [LBR-72]
+        : Timing arc 'min_pulse_width' between libpins 'RN' and 'RN' on libcell 'DFFRS_X1' is ignored. Hold timing analysis and optimization are not supported.
+Info    : Detected an unsupported timing arc type. [LBR-72]
+        : Timing arc 'min_pulse_width' between libpins 'SN' and 'SN' on libcell 'DFFRS_X1' is ignored. Hold timing analysis and optimization are not supported.
+Info    : Detected an unsupported timing arc type. [LBR-72]
+        : Timing arc 'min_pulse_width' between libpins 'CK' and 'CK' on libcell 'DFFRS_X1' is ignored. Hold timing analysis and optimization are not supported.
+Info    : Detected an unsupported timing arc type. [LBR-72]
+        : Timing arc 'min_pulse_width' between libpins 'RN' and 'RN' on libcell 'DFFRS_X2' is ignored. Hold timing analysis and optimization are not supported.
+Info    : Detected an unsupported timing arc type. [LBR-72]
+        : Timing arc 'min_pulse_width' between libpins 'SN' and 'SN' on libcell 'DFFRS_X2' is ignored. Hold timing analysis and optimization are not supported.
+Info    : Detected an unsupported timing arc type. [LBR-72]
+        : Timing arc 'min_pulse_width' between libpins 'CK' and 'CK' on libcell 'DFFRS_X2' is ignored. Hold timing analysis and optimization are not supported.
+Info    : Detected an unsupported timing arc type. [LBR-72]
+        : Timing arc 'min_pulse_width' between libpins 'RN' and 'RN' on libcell 'DFFR_X1' is ignored. Hold timing analysis and optimization are not supported.
+Info    : Detected an unsupported timing arc type. [LBR-72]
+        : Timing arc 'min_pulse_width' between libpins 'CK' and 'CK' on libcell 'DFFR_X1' is ignored. Hold timing analysis and optimization are not supported.
+Info    : Detected an unsupported timing arc type. [LBR-72]
+        : Timing arc 'min_pulse_width' between libpins 'RN' and 'RN' on libcell 'DFFR_X2' is ignored. Hold timing analysis and optimization are not supported.
+Info    : Detected an unsupported timing arc type. [LBR-72]
+        : Timing arc 'min_pulse_width' between libpins 'CK' and 'CK' on libcell 'DFFR_X2' is ignored. Hold timing analysis and optimization are not supported.
+Info    : Detected an unsupported timing arc type. [LBR-72]
+        : Timing arc 'min_pulse_width' between libpins 'SN' and 'SN' on libcell 'DFFS_X1' is ignored. Hold timing analysis and optimization are not supported.
+Info    : Detected an unsupported timing arc type. [LBR-72]
+        : Timing arc 'min_pulse_width' between libpins 'CK' and 'CK' on libcell 'DFFS_X1' is ignored. Hold timing analysis and optimization are not supported.
+Info    : Detected an unsupported timing arc type. [LBR-72]
+        : Timing arc 'min_pulse_width' between libpins 'SN' and 'SN' on libcell 'DFFS_X2' is ignored. Hold timing analysis and optimization are not supported.
+Info    : Detected an unsupported timing arc type. [LBR-72]
+        : Timing arc 'min_pulse_width' between libpins 'CK' and 'CK' on libcell 'DFFS_X2' is ignored. Hold timing analysis and optimization are not supported.
+Info    : Detected an unsupported timing arc type. [LBR-72]
+        : Timing arc 'min_pulse_width' between libpins 'CK' and 'CK' on libcell 'DFF_X1' is ignored. Hold timing analysis and optimization are not supported.
+Info    : Detected an unsupported timing arc type. [LBR-72]
+        : Timing arc 'min_pulse_width' between libpins 'CK' and 'CK' on libcell 'DFF_X2' is ignored. Hold timing analysis and optimization are not supported.
+Info    : Detected an unsupported timing arc type. [LBR-72]
+        : Timing arc 'min_pulse_width' between libpins 'G' and 'G' on libcell 'DLH_X1' is ignored. Hold timing analysis and optimization are not supported.
+Info    : Detected an unsupported timing arc type. [LBR-72]
+        : Timing arc 'min_pulse_width' between libpins 'G' and 'G' on libcell 'DLH_X2' is ignored. Hold timing analysis and optimization are not supported.
+Info    : Detected an unsupported timing arc type. [LBR-72]
+        : Timing arc 'min_pulse_width' between libpins 'GN' and 'GN' on libcell 'DLL_X1' is ignored. Hold timing analysis and optimization are not supported.
+Info    : Detected an unsupported timing arc type. [LBR-72]
+        : Timing arc 'min_pulse_width' between libpins 'GN' and 'GN' on libcell 'DLL_X2' is ignored. Hold timing analysis and optimization are not supported.
+Info    : Both 'pos_unate' and 'neg_unate' timing_sense arcs have been processed. [LBR-162]
+        : Non_unate 'timing_sense' inferred between pin 'A' and 'S' in libcell 'FA_X1'.
+        : Setting the 'timing_sense' to non_unate.
+Info    : Both 'pos_unate' and 'neg_unate' timing_sense arcs have been processed. [LBR-162]
+        : Non_unate 'timing_sense' inferred between pin 'B' and 'S' in libcell 'FA_X1'.
+Info    : Both 'pos_unate' and 'neg_unate' timing_sense arcs have been processed. [LBR-162]
+        : Non_unate 'timing_sense' inferred between pin 'CI' and 'S' in libcell 'FA_X1'.
+Info    : Both 'pos_unate' and 'neg_unate' timing_sense arcs have been processed. [LBR-162]
+        : Non_unate 'timing_sense' inferred between pin 'A' and 'S' in libcell 'HA_X1'.
+Info    : Both 'pos_unate' and 'neg_unate' timing_sense arcs have been processed. [LBR-162]
+        : Non_unate 'timing_sense' inferred between pin 'B' and 'S' in libcell 'HA_X1'.
+Info    : Both 'pos_unate' and 'neg_unate' timing_sense arcs have been processed. [LBR-162]
+        : Non_unate 'timing_sense' inferred between pin 'S' and 'Z' in libcell 'MUX2_X1'.
+Info    : Both 'pos_unate' and 'neg_unate' timing_sense arcs have been processed. [LBR-162]
+        : Non_unate 'timing_sense' inferred between pin 'S' and 'Z' in libcell 'MUX2_X2'.
+Info    : Detected an unsupported timing arc type. [LBR-72]
+        : Timing arc 'min_pulse_width' between libpins 'RN' and 'RN' on libcell 'SDFFRS_X1' is ignored. Hold timing analysis and optimization are not supported.
+Info    : Detected an unsupported timing arc type. [LBR-72]
+        : Timing arc 'min_pulse_width' between libpins 'SN' and 'SN' on libcell 'SDFFRS_X1' is ignored. Hold timing analysis and optimization are not supported.
+Info    : Detected an unsupported timing arc type. [LBR-72]
+        : Timing arc 'min_pulse_width' between libpins 'CK' and 'CK' on libcell 'SDFFRS_X1' is ignored. Hold timing analysis and optimization are not supported.
+Info    : Detected an unsupported timing arc type. [LBR-72]
+        : Timing arc 'min_pulse_width' between libpins 'RN' and 'RN' on libcell 'SDFFRS_X2' is ignored. Hold timing analysis and optimization are not supported.
+Info    : Detected an unsupported timing arc type. [LBR-72]
+        : Timing arc 'min_pulse_width' between libpins 'SN' and 'SN' on libcell 'SDFFRS_X2' is ignored. Hold timing analysis and optimization are not supported.
+Info    : Detected an unsupported timing arc type. [LBR-72]
+        : Timing arc 'min_pulse_width' between libpins 'CK' and 'CK' on libcell 'SDFFRS_X2' is ignored. Hold timing analysis and optimization are not supported.
+Info    : Detected an unsupported timing arc type. [LBR-72]
+        : Timing arc 'min_pulse_width' between libpins 'RN' and 'RN' on libcell 'SDFFR_X1' is ignored. Hold timing analysis and optimization are not supported.
+Info    : Detected an unsupported timing arc type. [LBR-72]
+        : Timing arc 'min_pulse_width' between libpins 'CK' and 'CK' on libcell 'SDFFR_X1' is ignored. Hold timing analysis and optimization are not supported.
+Info    : Detected an unsupported timing arc type. [LBR-72]
+        : Timing arc 'min_pulse_width' between libpins 'RN' and 'RN' on libcell 'SDFFR_X2' is ignored. Hold timing analysis and optimization are not supported.
+Info    : Detected an unsupported timing arc type. [LBR-72]
+        : Timing arc 'min_pulse_width' between libpins 'CK' and 'CK' on libcell 'SDFFR_X2' is ignored. Hold timing analysis and optimization are not supported.
+Info    : Detected an unsupported timing arc type. [LBR-72]
+        : Timing arc 'min_pulse_width' between libpins 'SN' and 'SN' on libcell 'SDFFS_X1' is ignored. Hold timing analysis and optimization are not supported.
+Info    : Detected an unsupported timing arc type. [LBR-72]
+        : Timing arc 'min_pulse_width' between libpins 'CK' and 'CK' on libcell 'SDFFS_X1' is ignored. Hold timing analysis and optimization are not supported.
+Info    : Detected an unsupported timing arc type. [LBR-72]
+        : Timing arc 'min_pulse_width' between libpins 'SN' and 'SN' on libcell 'SDFFS_X2' is ignored. Hold timing analysis and optimization are not supported.
+Info    : Detected an unsupported timing arc type. [LBR-72]
+        : Timing arc 'min_pulse_width' between libpins 'CK' and 'CK' on libcell 'SDFFS_X2' is ignored. Hold timing analysis and optimization are not supported.
+Info    : Detected an unsupported timing arc type. [LBR-72]
+        : Timing arc 'min_pulse_width' between libpins 'CK' and 'CK' on libcell 'SDFF_X1' is ignored. Hold timing analysis and optimization are not supported.
+Info    : Detected an unsupported timing arc type. [LBR-72]
+        : Timing arc 'min_pulse_width' between libpins 'CK' and 'CK' on libcell 'SDFF_X2' is ignored. Hold timing analysis and optimization are not supported.
+Info    : Detected an unsupported timing arc type. [LBR-72]
+        : Timing arc 'min_pulse_width' between libpins 'G' and 'G' on libcell 'TLAT_X1' is ignored. Hold timing analysis and optimization are not supported.
+Info    : Mismatch in unateness between 'timing_sense' attribute and the function. [LBR-155]
+        : 'timing_sense' attribute between pin 'D' and 'Q' in libcell 'TLAT_X1' is 'pos_unate', but unateness determined from function is 'non_unate'.
+        : The 'timing_sense' attribute will be respected.
+Info    : Both 'pos_unate' and 'neg_unate' timing_sense arcs have been processed. [LBR-162]
+        : Non_unate 'timing_sense' inferred between pin 'A' and 'ZN' in libcell 'XNOR2_X1'.
+Info    : Both 'pos_unate' and 'neg_unate' timing_sense arcs have been processed. [LBR-162]
+        : Non_unate 'timing_sense' inferred between pin 'B' and 'ZN' in libcell 'XNOR2_X1'.
+Info    : Both 'pos_unate' and 'neg_unate' timing_sense arcs have been processed. [LBR-162]
+        : Non_unate 'timing_sense' inferred between pin 'A' and 'ZN' in libcell 'XNOR2_X2'.
+Info    : Both 'pos_unate' and 'neg_unate' timing_sense arcs have been processed. [LBR-162]
+        : Non_unate 'timing_sense' inferred between pin 'B' and 'ZN' in libcell 'XNOR2_X2'.
+Info    : Both 'pos_unate' and 'neg_unate' timing_sense arcs have been processed. [LBR-162]
+        : Non_unate 'timing_sense' inferred between pin 'A' and 'Z' in libcell 'XOR2_X1'.
+Info    : Both 'pos_unate' and 'neg_unate' timing_sense arcs have been processed. [LBR-162]
+        : Non_unate 'timing_sense' inferred between pin 'B' and 'Z' in libcell 'XOR2_X1'.
+Info    : Both 'pos_unate' and 'neg_unate' timing_sense arcs have been processed. [LBR-162]
+        : Non_unate 'timing_sense' inferred between pin 'A' and 'Z' in libcell 'XOR2_X2'.
+Info    : Both 'pos_unate' and 'neg_unate' timing_sense arcs have been processed. [LBR-162]
+        : Non_unate 'timing_sense' inferred between pin 'B' and 'Z' in libcell 'XOR2_X2'.
+Warning : Non-monotonic wireload model found. [LBR-81]
+        : 'Length' table in wireload model '3K_hvratio_1_2' is non-monotonic.
+        : Non-monotonic wireload models can cause problems during synthesis and/or mapping.  Raising some of the points in the curve to give it a monotonic shape.
+Warning : Non-monotonic wireload model found. [LBR-81]
+        : 'Length' table in wireload model '3K_hvratio_1_2' is non-monotonic.
+Warning : Non-monotonic wireload model found. [LBR-81]
+        : 'Length' table in wireload model '3K_hvratio_1_2' is non-monotonic.
+  Setting attribute of root '/': 'lef_library' = /home/vitor/Desktop/cadence/Library/NangateOpenCellLib_45nm/Back_End/lef//NangateOpenCellLibrary.tech.lef /home/vitor/Desktop/cadence/Library/NangateOpenCellLib_45nm/Back_End/lef//NangateOpenCellLibrary.lef
+Reading HDLs...
+              Reading VHDL predefined package '/home/vitor/Desktop/cadence/RC11.10/tools.lnx86/lib/vhdl/std/standard.vhdl'
+            Reading VHDL file '../rtl/LOOKAHEAD.vhd'
+              Reading VHDL predefined package '/home/vitor/Desktop/cadence/RC11.10/tools.lnx86/lib/vhdl/ieee/std_logic_1164.vhdl'
+              Reading VHDL predefined package '/home/vitor/Desktop/cadence/RC11.10/tools.lnx86/lib/vhdl/cadence/attributes.vhdl'
+Elaborate Design...
+Info    : Library Information. [LBR-415]
+        : Library: 'NangateOpenCellLibrary_worst_low_ecsm.lib', Total cells: '134', Usable cells: '116', Unusable cells: '18'.
+	List of unusable cells: 'ANTENNA_X1 CLKGATETST_X1 CLKGATETST_X2 CLKGATETST_X4 CLKGATETST_X8 CLKGATE_X1 CLKGATE_X2 CLKGATE_X4 CLKGATE_X8 FILLCELL_X1 FILLCELL_X2 FILLCELL_X4 FILLCELL_X8 FILLCELL_X16 FILLCELL_X32 LOGIC0_X1 LOGIC1_X1 TLAT_X1 .'
+Info    : Detected an unsupported timing arc type. [LBR-72]
+        : Timing arc 'min_pulse_width' between libpins 'CK' and 'CK' on libcell 'CLKGATETST_X1' is ignored. Hold timing analysis and optimization are not supported.
+Info    : Detected an unsupported timing arc type. [LBR-72]
+        : Timing arc 'min_pulse_width' between libpins 'CK' and 'CK' on libcell 'CLKGATETST_X2' is ignored. Hold timing analysis and optimization are not supported.
+Info    : Detected an unsupported timing arc type. [LBR-72]
+        : Timing arc 'min_pulse_width' between libpins 'CK' and 'CK' on libcell 'CLKGATETST_X4' is ignored. Hold timing analysis and optimization are not supported.
+Info    : Detected an unsupported timing arc type. [LBR-72]
+        : Timing arc 'min_pulse_width' between libpins 'CK' and 'CK' on libcell 'CLKGATETST_X8' is ignored. Hold timing analysis and optimization are not supported.
+Info    : Detected an unsupported timing arc type. [LBR-72]
+        : Timing arc 'min_pulse_width' between libpins 'CK' and 'CK' on libcell 'CLKGATE_X1' is ignored. Hold timing analysis and optimization are not supported.
+Info    : Detected an unsupported timing arc type. [LBR-72]
+        : Timing arc 'min_pulse_width' between libpins 'CK' and 'CK' on libcell 'CLKGATE_X2' is ignored. Hold timing analysis and optimization are not supported.
+Info    : Detected an unsupported timing arc type. [LBR-72]
+        : Timing arc 'min_pulse_width' between libpins 'CK' and 'CK' on libcell 'CLKGATE_X4' is ignored. Hold timing analysis and optimization are not supported.
+Info    : Detected an unsupported timing arc type. [LBR-72]
+        : Timing arc 'min_pulse_width' between libpins 'CK' and 'CK' on libcell 'CLKGATE_X8' is ignored. Hold timing analysis and optimization are not supported.
+Info    : Detected an unsupported timing arc type. [LBR-72]
+        : Timing arc 'min_pulse_width' between libpins 'RN' and 'RN' on libcell 'DFFRS_X1' is ignored. Hold timing analysis and optimization are not supported.
+Info    : Detected an unsupported timing arc type. [LBR-72]
+        : Timing arc 'min_pulse_width' between libpins 'SN' and 'SN' on libcell 'DFFRS_X1' is ignored. Hold timing analysis and optimization are not supported.
+Info    : Detected an unsupported timing arc type. [LBR-72]
+        : Timing arc 'min_pulse_width' between libpins 'CK' and 'CK' on libcell 'DFFRS_X1' is ignored. Hold timing analysis and optimization are not supported.
+Info    : Detected an unsupported timing arc type. [LBR-72]
+        : Timing arc 'min_pulse_width' between libpins 'RN' and 'RN' on libcell 'DFFRS_X2' is ignored. Hold timing analysis and optimization are not supported.
+Info    : Detected an unsupported timing arc type. [LBR-72]
+        : Timing arc 'min_pulse_width' between libpins 'SN' and 'SN' on libcell 'DFFRS_X2' is ignored. Hold timing analysis and optimization are not supported.
+Info    : Detected an unsupported timing arc type. [LBR-72]
+        : Timing arc 'min_pulse_width' between libpins 'CK' and 'CK' on libcell 'DFFRS_X2' is ignored. Hold timing analysis and optimization are not supported.
+Info    : Detected an unsupported timing arc type. [LBR-72]
+        : Timing arc 'min_pulse_width' between libpins 'RN' and 'RN' on libcell 'DFFR_X1' is ignored. Hold timing analysis and optimization are not supported.
+Info    : Detected an unsupported timing arc type. [LBR-72]
+        : Timing arc 'min_pulse_width' between libpins 'CK' and 'CK' on libcell 'DFFR_X1' is ignored. Hold timing analysis and optimization are not supported.
+Info    : Detected an unsupported timing arc type. [LBR-72]
+        : Timing arc 'min_pulse_width' between libpins 'RN' and 'RN' on libcell 'DFFR_X2' is ignored. Hold timing analysis and optimization are not supported.
+Info    : Detected an unsupported timing arc type. [LBR-72]
+        : Timing arc 'min_pulse_width' between libpins 'CK' and 'CK' on libcell 'DFFR_X2' is ignored. Hold timing analysis and optimization are not supported.
+Info    : Detected an unsupported timing arc type. [LBR-72]
+        : Timing arc 'min_pulse_width' between libpins 'SN' and 'SN' on libcell 'DFFS_X1' is ignored. Hold timing analysis and optimization are not supported.
+Info    : Detected an unsupported timing arc type. [LBR-72]
+        : Timing arc 'min_pulse_width' between libpins 'CK' and 'CK' on libcell 'DFFS_X1' is ignored. Hold timing analysis and optimization are not supported.
+Info    : Detected an unsupported timing arc type. [LBR-72]
+        : Timing arc 'min_pulse_width' between libpins 'SN' and 'SN' on libcell 'DFFS_X2' is ignored. Hold timing analysis and optimization are not supported.
+Info    : Detected an unsupported timing arc type. [LBR-72]
+        : Timing arc 'min_pulse_width' between libpins 'CK' and 'CK' on libcell 'DFFS_X2' is ignored. Hold timing analysis and optimization are not supported.
+Info    : Detected an unsupported timing arc type. [LBR-72]
+        : Timing arc 'min_pulse_width' between libpins 'CK' and 'CK' on libcell 'DFF_X1' is ignored. Hold timing analysis and optimization are not supported.
+Info    : Detected an unsupported timing arc type. [LBR-72]
+        : Timing arc 'min_pulse_width' between libpins 'CK' and 'CK' on libcell 'DFF_X2' is ignored. Hold timing analysis and optimization are not supported.
+Info    : Detected an unsupported timing arc type. [LBR-72]
+        : Timing arc 'min_pulse_width' between libpins 'G' and 'G' on libcell 'DLH_X1' is ignored. Hold timing analysis and optimization are not supported.
+Info    : Detected an unsupported timing arc type. [LBR-72]
+        : Timing arc 'min_pulse_width' between libpins 'G' and 'G' on libcell 'DLH_X2' is ignored. Hold timing analysis and optimization are not supported.
+Info    : Detected an unsupported timing arc type. [LBR-72]
+        : Timing arc 'min_pulse_width' between libpins 'GN' and 'GN' on libcell 'DLL_X1' is ignored. Hold timing analysis and optimization are not supported.
+Info    : Detected an unsupported timing arc type. [LBR-72]
+        : Timing arc 'min_pulse_width' between libpins 'GN' and 'GN' on libcell 'DLL_X2' is ignored. Hold timing analysis and optimization are not supported.
+Info    : Detected an unsupported timing arc type. [LBR-72]
+        : Timing arc 'min_pulse_width' between libpins 'RN' and 'RN' on libcell 'SDFFRS_X1' is ignored. Hold timing analysis and optimization are not supported.
+Info    : Detected an unsupported timing arc type. [LBR-72]
+        : Timing arc 'min_pulse_width' between libpins 'SN' and 'SN' on libcell 'SDFFRS_X1' is ignored. Hold timing analysis and optimization are not supported.
+Info    : Detected an unsupported timing arc type. [LBR-72]
+        : Timing arc 'min_pulse_width' between libpins 'CK' and 'CK' on libcell 'SDFFRS_X1' is ignored. Hold timing analysis and optimization are not supported.
+Info    : Detected an unsupported timing arc type. [LBR-72]
+        : Timing arc 'min_pulse_width' between libpins 'RN' and 'RN' on libcell 'SDFFRS_X2' is ignored. Hold timing analysis and optimization are not supported.
+Info    : Detected an unsupported timing arc type. [LBR-72]
+        : Timing arc 'min_pulse_width' between libpins 'SN' and 'SN' on libcell 'SDFFRS_X2' is ignored. Hold timing analysis and optimization are not supported.
+Info    : Detected an unsupported timing arc type. [LBR-72]
+        : Timing arc 'min_pulse_width' between libpins 'CK' and 'CK' on libcell 'SDFFRS_X2' is ignored. Hold timing analysis and optimization are not supported.
+Info    : Detected an unsupported timing arc type. [LBR-72]
+        : Timing arc 'min_pulse_width' between libpins 'RN' and 'RN' on libcell 'SDFFR_X1' is ignored. Hold timing analysis and optimization are not supported.
+Info    : Detected an unsupported timing arc type. [LBR-72]
+        : Timing arc 'min_pulse_width' between libpins 'CK' and 'CK' on libcell 'SDFFR_X1' is ignored. Hold timing analysis and optimization are not supported.
+Info    : Detected an unsupported timing arc type. [LBR-72]
+        : Timing arc 'min_pulse_width' between libpins 'RN' and 'RN' on libcell 'SDFFR_X2' is ignored. Hold timing analysis and optimization are not supported.
+Info    : Detected an unsupported timing arc type. [LBR-72]
+        : Timing arc 'min_pulse_width' between libpins 'CK' and 'CK' on libcell 'SDFFR_X2' is ignored. Hold timing analysis and optimization are not supported.
+Info    : Detected an unsupported timing arc type. [LBR-72]
+        : Timing arc 'min_pulse_width' between libpins 'SN' and 'SN' on libcell 'SDFFS_X1' is ignored. Hold timing analysis and optimization are not supported.
+Info    : Detected an unsupported timing arc type. [LBR-72]
+        : Timing arc 'min_pulse_width' between libpins 'CK' and 'CK' on libcell 'SDFFS_X1' is ignored. Hold timing analysis and optimization are not supported.
+Info    : Detected an unsupported timing arc type. [LBR-72]
+        : Timing arc 'min_pulse_width' between libpins 'SN' and 'SN' on libcell 'SDFFS_X2' is ignored. Hold timing analysis and optimization are not supported.
+Info    : Detected an unsupported timing arc type. [LBR-72]
+        : Timing arc 'min_pulse_width' between libpins 'CK' and 'CK' on libcell 'SDFFS_X2' is ignored. Hold timing analysis and optimization are not supported.
+Info    : Detected an unsupported timing arc type. [LBR-72]
+        : Timing arc 'min_pulse_width' between libpins 'CK' and 'CK' on libcell 'SDFF_X1' is ignored. Hold timing analysis and optimization are not supported.
+Info    : Detected an unsupported timing arc type. [LBR-72]
+        : Timing arc 'min_pulse_width' between libpins 'CK' and 'CK' on libcell 'SDFF_X2' is ignored. Hold timing analysis and optimization are not supported.
+Info    : Detected an unsupported timing arc type. [LBR-72]
+        : Timing arc 'min_pulse_width' between libpins 'G' and 'G' on libcell 'TLAT_X1' is ignored. Hold timing analysis and optimization are not supported.
+Info    : Mismatch in unateness between 'timing_sense' attribute and the function. [LBR-155]
+        : 'timing_sense' attribute between pin 'D' and 'Q' in libcell 'TLAT_X1' is 'pos_unate', but unateness determined from function is 'non_unate'.
+Warning : Non-monotonic wireload model found. [LBR-81]
+        : 'Length' table in wireload model '3K_hvratio_1_2' is non-monotonic.
+Warning : Non-monotonic wireload model found. [LBR-81]
+        : 'Length' table in wireload model '3K_hvratio_1_2' is non-monotonic.
+Warning : Non-monotonic wireload model found. [LBR-81]
+        : 'Length' table in wireload model '3K_hvratio_1_2' is non-monotonic.
+  Elaborating top-level block 'LOOKAHEAD' from file '../rtl/LOOKAHEAD.vhd'.
+Warning : Referenced signal not in sensitivity list.  This may cause simulation mismatches between the original and synthesized designs. [CDFG-360]
+        : Signal 'cin' in module 'LOOKAHEAD' in file '../rtl/LOOKAHEAD.vhd' on line 25.
+  Done elaborating 'LOOKAHEAD'.
+Runtime & Memory after 'read_hdl'
+===========================================
+The RUNTIME after Elaboration is 6 secs
+and the MEMORY_USAGE after Elaboration is 90.25 MB
+===========================================
+  Checking the design.
+
+ 	 Check Design Report
+	 -------------------- 
+
+  Unresolved References & Empty Modules
+  ------------------------------------- 
+No unresolved references in design 'LOOKAHEAD'
+
+No empty modules in design 'LOOKAHEAD'
+
+  Done Checking the design.
+Info    : An external clock is being defined. [TIM-167]
+        : The clock is named 'clk'.
+        : An external clock does not directly drive any points within the design, but is only used as a reference for external delays.
+Statistics for commands executed by read_sdc:
+ "all_inputs"              - successful      1 , failed      0 (runtime  0.00)
+ "all_outputs"             - successful      3 , failed      0 (runtime  0.00)
+ "set_clock_uncertainty"   - successful      1 , failed      0 (runtime  0.00)
+ "set_load"                - successful      2 , failed      0 (runtime  0.00)
+Total runtime 0
+        Tracing clock networks.
+        Levelizing the circuit.
+        Computing net loads.
+        Computing delays.
+        Computing arrivals and requireds.
+============================================================
+  Generated by:           Encounter(R) RTL Compiler RC11.10 - v11.10-p005_1
+  Generated on:           Sep 30 2019  02:52:50 pm
+  Module:                 LOOKAHEAD
+  Technology library:     NangateOpenCellLibrary revision 1.0
+  Operating conditions:   worst_low 
+  Interconnect mode:      global
+  Area mode:              physical library
+============================================================
+
+No problems found.
+
+  Setting attribute of root '/': 'dp_csa' = none
+Warning : This attribute will be obsolete in a next major release. [TUI-32]
+        : attribute: 'lp_optimize_dynamic_power_first', object type: 'design'
+        : To control how leakage and dynamic power are optimized, set the 'lp_power_optimization_weight' design attribute.
+  Setting attribute of design 'LOOKAHEAD': 'lp_optimize_dynamic_power_first' = true
+  Setting attribute of design 'LOOKAHEAD': 'max_leakage_power' = 0.0
+Info    : Resetting power analysis results. [PA-7]
+        : Power analysis effort level changed from 'medium' to 'high'.
+        : All computed switching activities are removed.
+  Setting attribute of root '/': 'lp_power_analysis_effort' = high
+Checking out license 'RTL_Compiler_Low_Power_Option'... (0 seconds elapsed)
+License 'RTL_Compiler_Low_Power_Option' checkout failed.
+Checking out license 'RTL_Compiler_Ultra_II_Option'... (0 seconds elapsed)
+  Cleaning up the design /designs/LOOKAHEAD ...
+  Starting building RTL power analysis models ...
+  Preprocessing the netlist for building RTL power models ...
+  Building RTL power models for top-level design /designs/LOOKAHEAD ...
+  Done building models for power analysis.
+  RTL power modeling has finished.  Use command 'report power' to see power report.
+        Computing net loads.
+Info    : Time taken to report power. [RPT-7]
+        : 0.00 cpu seconds
+Current PLE settings:
+
+Aspect ratio        : 1.00
+Shrink factor       : 1.00
+Scale of res/length : 1.00
+Scale of cap/length : 1.00
+Net derating factor : 1.00
+Site size           : 1.59 um (from lef [tech+cell])
+
+                                   Capacitance  
+  Layer                             / Length         Data source:
+Name        Direction Utilization  (pF/micron)       lef_library
+------------------------------------------------
+metal1          H         1.00        0.000060  
+metal2          V         1.00        0.000053  
+metal3          H         1.00        0.000052  
+metal4          V         1.00        0.000065  
+metal5          H         1.00        0.000007  
+metal6          V         1.00        0.000049  
+metal7          H         1.00        0.000068  
+metal8          V         1.00        0.000050  
+metal9          H         1.00        0.000065  
+metal10         V         1.00        0.000049  
+
+                                    Resistance   
+  Layer                              / Length         Data source:
+Name        Direction Utilization  (ohm/micron)       lef_library
+-------------------------------------------------
+metal1          H         1.00         5.428571  
+metal2          V         1.00         3.571429  
+metal3          H         1.00         3.571429  
+metal4          V         1.00         1.500000  
+metal5          H         1.00         1.500000  
+metal6          V         1.00         1.500000  
+metal7          H         1.00         0.187500  
+metal8          V         1.00         0.187500  
+metal9          H         1.00         0.037500  
+metal10         V         1.00         0.037500  
+
+                                        Area     
+  Layer                               / Length        Data source:
+Name        Direction Utilization     (micron)        lef_library
+-------------------------------------------------
+metal1          H         1.00         0.070000  
+metal2          V         1.00         0.070000  
+metal3          H         1.00         0.070000  
+metal4          V         1.00         0.140000  
+metal5          H         1.00         0.140000  
+metal6          V         1.00         0.140000  
+metal7          H         1.00         0.400000  
+metal8          V         1.00         0.400000  
+metal9          H         1.00         0.800000  
+metal10         V         1.00         0.800000  
+
+      Removing temporary intermediate hierarchies under LOOKAHEAD
+    Synthesized LOOKAHEAD.
+  Synthesis succeeded.
+Runtime & Memory after 'synthesize -to_generic'
+===========================================
+The RUNTIME after GENERIC is 18 secs
+and the MEMORY_USAGE after GENERIC is 107.06 MB
+===========================================
+Beginning report datapath command
+        Computing net loads.
+Current PLE settings:
+
+Aspect ratio        : 1.00
+Shrink factor       : 1.00
+Scale of res/length : 1.00
+Scale of cap/length : 1.00
+Net derating factor : 1.00
+Site size           : 1.59 um (from lef [tech+cell])
+
+                                   Capacitance  
+  Layer                             / Length         Data source:
+Name        Direction Utilization  (pF/micron)       lef_library
+------------------------------------------------
+metal1          H         1.00        0.000060  
+metal2          V         1.00        0.000053  
+metal3          H         1.00        0.000052  
+metal4          V         1.00        0.000065  
+metal5          H         1.00        0.000007  
+metal6          V         1.00        0.000049  
+metal7          H         1.00        0.000068  
+metal8          V         1.00        0.000050  
+metal9          H         1.00        0.000065  
+metal10         V         1.00        0.000049  
+
+                                    Resistance   
+  Layer                              / Length         Data source:
+Name        Direction Utilization  (ohm/micron)       lef_library
+-------------------------------------------------
+metal1          H         1.00         5.428571  
+metal2          V         1.00         3.571429  
+metal3          H         1.00         3.571429  
+metal4          V         1.00         1.500000  
+metal5          H         1.00         1.500000  
+metal6          V         1.00         1.500000  
+metal7          H         1.00         0.187500  
+metal8          V         1.00         0.187500  
+metal9          H         1.00         0.037500  
+metal10         V         1.00         0.037500  
+
+                                        Area     
+  Layer                               / Length        Data source:
+Name        Direction Utilization     (micron)        lef_library
+-------------------------------------------------
+metal1          H         1.00         0.070000  
+metal2          V         1.00         0.070000  
+metal3          H         1.00         0.070000  
+metal4          V         1.00         0.140000  
+metal5          H         1.00         0.140000  
+metal6          V         1.00         0.140000  
+metal7          H         1.00         0.400000  
+metal8          V         1.00         0.400000  
+metal9          H         1.00         0.800000  
+metal10         V         1.00         0.800000  
+
+Mapping LOOKAHEAD to gates.
+      Mapping 'LOOKAHEAD'...
+        Preparing the circuit
+          Pruning unused logic
+          Analyzing hierarchical boundaries
+          Propagating constants
+        Done preparing the circuit
+          Structuring (delay-based) LOOKAHEAD...
+            Starting partial collapsing (xors only) LOOKAHEAD
+            Finished partial collapsing.
+            Starting partial collapsing  LOOKAHEAD
+            Finished partial collapsing.
+            Performing redundancy-removal...
+          Done structuring (delay-based) LOOKAHEAD
+ 
+Global mapping target info
+==========================
+Cost Group 'default' target slack:  -482 ps
+Target path end-point (Port: LOOKAHEAD/s[29])
+
+   Pin                Type          Fanout Load Arrival   
+                                           (fF)   (ps)    
+----------------------------------------------------------
+(clock clk) <<<  launch                               0 R 
+(in_del_1)       ext delay                                
+b[0]        (u)  in port                 4 20.0           
+g510/in_1                                                 
+g510/z      (u)  unmapped_or2            1  5.0           
+g42539/in_0                                               
+g42539/z    (u)  unmapped_nand2          1  5.0           
+g42428/in_0                                               
+g42428/z    (u)  unmapped_nand2          3 15.0           
+g42422/in_1                                               
+g42422/z    (u)  unmapped_nand2          1  5.0           
+g42381/in_0                                               
+g42381/z    (u)  unmapped_nand2          4 20.0           
+g42374/in_0                                               
+g42374/z    (u)  unmapped_complex2       1  5.0           
+g42368/in_1                                               
+g42368/z    (u)  unmapped_complex2       5 25.0           
+g42350/in_1                                               
+g42350/z    (u)  unmapped_complex2       1  5.0           
+g42345/in_1                                               
+g42345/z    (u)  unmapped_complex2       4 20.0           
+g42331/in_1                                               
+g42331/z    (u)  unmapped_complex2       2 10.0           
+g42330/in_1                                               
+g42330/z    (u)  unmapped_nand2          1  5.0           
+g42303/in_1                                               
+g42303/z    (u)  unmapped_complex2       1  5.0           
+g42282/in_1                                               
+g42282/z    (u)  unmapped_complex2       3 15.0           
+g42273/in_1                                               
+g42273/z    (u)  unmapped_nand2          3 15.0           
+g42231/in_0                                               
+g42231/z    (u)  unmapped_nand2          2 10.0           
+g42222/in_1                                               
+g42222/z    (u)  unmapped_complex2       1  5.0           
+g42223/in_1                                               
+g42223/z         unmapped_nand2          1  0.7           
+s[29]       <<<  out port                                 
+(ou_del_1)       ext delay                                
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+(clock clk)      capture                             20 R 
+                 uncertainty                              
+----------------------------------------------------------
+Start-point  : b[0]
+End-point    : s[29]
+
+(u) : Net has unmapped pin(s).
+
+The global mapper estimates a slack for this path of -482ps.
+ 
+          Restructuring (delay-based) LOOKAHEAD...
+          Done restructuring (delay-based) LOOKAHEAD
+        Optimizing component LOOKAHEAD...
+ 
+Global mapping timing result
+============================
+        Tracing clock networks.
+        Levelizing the circuit.
+        Computing net loads.
+        Computing delays.
+        Computing arrivals and requireds.
+   Pin             Type       Fanout Load Slew Delay Arrival   
+                                     (fF) (ps)  (ps)   (ps)    
+---------------------------------------------------------------
+(clock clk)      launch                                    0 R 
+(in_del_1)       ext delay                      +100     100 F 
+a[6]             in port           2  6.6    0    +0     100 F 
+g50570/B                                          +0     100   
+g50570/CO        HA_X1             1  3.2    6   +26     126 F 
+g50530/A                                          +0     126   
+g50530/ZN        AOI21_X2          1  3.7   15   +30     156 R 
+g50473/A3                                         +0     156   
+g50473/ZN        NAND3_X2          1  3.2   10   +24     180 F 
+g50472/A                                          +0     180   
+g50472/ZN        INV_X2            1  6.0    7   +16     196 R 
+g50456/A1                                         +0     196   
+g50456/ZN        NAND2_X4          4  9.3    7   +14     210 F 
+g50448/B1                                         +0     210   
+g50448/ZN        AOI21_X2          3  5.6   18   +25     235 R 
+g50447/A                                          +0     235   
+g50447/ZN        INV_X1            1  3.1    7   +15     250 F 
+g50443/A1                                         +0     250   
+g50443/ZN        NOR2_X2           2  5.7   14   +23     273 R 
+g50426/B1                                         +0     273   
+g50426/ZN        OAI21_X2          2  4.8    9   +19     292 F 
+g50410/A1                                         +0     292   
+g50410/ZN        NAND2_X2          2  5.1    8   +16     308 R 
+g50409/A                                          +0     308   
+g50409/ZN        INV_X1            1  1.8    4    +9     317 F 
+g50390/B1                                         +0     317   
+g50390/ZN        AOI21_X1          1  1.9   15   +20     336 R 
+g50377/A                                          +0     336   
+g50377/ZN        OAI21_X1          1  0.7    6   +20     357 F 
+s[12]       <<<  out port                         +0     357 F 
+(ou_del_1)       ext delay                      +100     457 F 
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+(clock clk)      capture                                  20 R 
+                 uncertainty                     -50     -30 R 
+---------------------------------------------------------------
+Timing slack :    -487ps (TIMING VIOLATION)
+Start-point  : a[6]
+End-point    : s[12]
+
+ 
+ 
+Global mapping status
+=====================
+                          Worst 
+                 Total  Weighted
+Operation         Area  Neg Slk Worst Path
+-------------------------------------------------------------------------------
+ global_map       1683     -486  a[6] --> s[12]
+ 
+Global incremental target info
+==============================
+Cost Group 'default' target slack:  -487 ps
+Target path end-point (Port: LOOKAHEAD/s[12])
+
+   Pin             Type       Fanout Load Arrival   
+                                     (fF)   (ps)    
+----------------------------------------------------
+(clock clk) <<<  launch                         0 R 
+(in_del_1)       ext delay                          
+a[6]             in port           2  6.6           
+g50570/B                                            
+g50570/CO        HA_X1             1  3.2           
+g50530/A                                            
+g50530/ZN        AOI21_X2          1  3.7           
+g50473/A3                                           
+g50473/ZN        NAND3_X2          1  3.2           
+g50472/A                                            
+g50472/ZN        INV_X2            1  6.0           
+g50456/A1                                           
+g50456/ZN        NAND2_X4          4  9.3           
+g50448/B1                                           
+g50448/ZN        AOI21_X2          3  5.6           
+g50447/A                                            
+g50447/ZN        INV_X1            1  3.1           
+g50443/A1                                           
+g50443/ZN        NOR2_X2           2  5.7           
+g50426/B1                                           
+g50426/ZN        OAI21_X2          2  4.8           
+g50410/A1                                           
+g50410/ZN        NAND2_X2          2  5.1           
+g50409/A                                            
+g50409/ZN        INV_X1            1  1.8           
+g50390/B1                                           
+g50390/ZN        AOI21_X1          1  1.9           
+g50377/A                                            
+g50377/ZN        OAI21_X1          1  0.7           
+s[12]       <<<  out port                           
+(ou_del_1)       ext delay                          
+- - - - - - - - - - - - - - - - - - - - - - - - - - 
+(clock clk)      capture                       20 R 
+                 uncertainty                        
+----------------------------------------------------
+Start-point  : a[6]
+End-point    : s[12]
+
+The global mapper estimates a slack for this path of -488ps.
+ 
+ 
+Global incremental timing result
+================================
+        Tracing clock networks.
+        Levelizing the circuit.
+        Computing net loads.
+        Computing delays.
+        Computing arrivals and requireds.
+   Pin             Type       Fanout Load Slew Delay Arrival   
+                                     (fF) (ps)  (ps)   (ps)    
+---------------------------------------------------------------
+(clock clk)      launch                                    0 R 
+(in_del_1)       ext delay                      +100     100 F 
+b[10]            in port           3  7.4    0    +0     100 F 
+g50654/A2                                         +0     100   
+g50654/ZN        NOR2_X2           3  7.0   16   +25     125 R 
+g50572/A                                          +0     125   
+g50572/ZN        INV_X1            2  5.0    8   +18     143 F 
+g50501/A3                                         +0     143   
+g50501/ZN        NAND3_X1          1  3.3   11   +20     163 R 
+g50475/A1                                         +0     163   
+g50475/ZN        NAND3_X2          2  7.4   14   +25     188 F 
+g50474/A                                          +0     188   
+g50474/ZN        INV_X4            2  8.3    7   +17     205 R 
+g50466/A1                                         +0     205   
+g50466/ZN        NOR2_X4           1  6.3    5    +9     214 F 
+g50460/A2                                         +0     214   
+g50460/ZN        NOR2_X4           1  6.0   10   +21     235 R 
+g50445/A1                                         +0     235   
+g50445/ZN        NAND2_X4          3  7.7    7   +14     250 F 
+g50442/A1                                         +0     250   
+g50442/ZN        NAND2_X2          2  5.0    8   +14     263 R 
+g50424/B1                                         +0     263   
+g50424/ZN        AOI21_X2          1  3.1    7   +14     277 F 
+g50412/A1                                         +0     277   
+g50412/ZN        NOR2_X2           3  6.2   15   +24     301 R 
+g50411/A                                          +0     301   
+g50411/ZN        INV_X1            1  1.8    5   +12     313 F 
+g50400/A1                                         +0     313   
+g50400/ZN        NAND2_X1          2  3.6   10   +15     328 R 
+g50381/A1                                         +0     328   
+g50381/ZN        NAND2_X1          1  1.8    7   +14     342 F 
+g50373/A                                          +0     342   
+g50373/ZN        OAI211_X1         1  0.7   11   +15     357 R 
+s[30]       <<<  out port                         +0     357 R 
+(ou_del_1)       ext delay                      +100     457 R 
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+(clock clk)      capture                                  20 R 
+                 uncertainty                     -50     -30 R 
+---------------------------------------------------------------
+Timing slack :    -487ps (TIMING VIOLATION)
+Start-point  : b[10]
+End-point    : s[30]
+
+ 
+ 
+Global incremental optimization status
+======================================
+                          Worst 
+                 Total  Weighted
+Operation         Area  Neg Slk Worst Path
+-------------------------------------------------------------------------------
+ global_inc       1649     -487  b[10] --> s[30]
+
+Scan mapping status report
+==========================
+    Scan mapping: converting flip-flops that pass TDRC.
+    Scan mapping: bypassed.  You have to either 1) set attribute 'dft_scan_map_mode' to 'tdrc_pass' and run 'check_dft_rules' or 2) set attribute 'dft_scan_map_mode' to 'force_all'.
+
+    Scan mapping bypassed because no TDRC data is available: either command 'check_dft_rules' has not been run or TDRC data has been subsequently invalidated.
+Info    : 'Conformal LEC9.1-s400' or later builds is recommended for verification. [WDO-600]
+        : The use of 'Conformal LEC9.1-s400' or later builds is recommended to get better verification results.
+Generating a dofile for design 'LOOKAHEAD' in file 'fv/LOOKAHEAD/rtl_to_g1.do' ...
+Info    : Forcing flat compare. [WDO-212]
+        : No hierarchies found in design.
+Info    : 'Conformal LEC9.1-s400' or later builds is recommended for verification. [WDO-600]
+Generating a dofile for design 'LOOKAHEAD' in file 'fv/LOOKAHEAD/rtl_to_g1_withoutovf.do' ...
+Info    : Forcing flat compare. [WDO-212]
+        : No hierarchies found in design.
+
+  Done mapping LOOKAHEAD
+  Synthesis succeeded.
+Runtime & Memory after 'synthesize -to_map -no_incr'
+===========================================
+The RUNTIME after MAPPED is 29 secs
+and the MEMORY_USAGE after MAPPED is 111.16 MB
+===========================================
+Beginning report datapath command
+        Computing net loads.
+Current PLE settings:
+
+Aspect ratio        : 1.00
+Shrink factor       : 1.00
+Scale of res/length : 1.00
+Scale of cap/length : 1.00
+Net derating factor : 1.00
+Site size           : 1.59 um (from lef [tech+cell])
+
+                                   Capacitance  
+  Layer                             / Length         Data source:
+Name        Direction Utilization  (pF/micron)       lef_library
+------------------------------------------------
+metal1          H         1.00        0.000060  
+metal2          V         1.00        0.000053  
+metal3          H         1.00        0.000052  
+metal4          V         1.00        0.000065  
+metal5          H         1.00        0.000007  
+metal6          V         1.00        0.000049  
+metal7          H         1.00        0.000068  
+metal8          V         1.00        0.000050  
+metal9          H         1.00        0.000065  
+metal10         V         1.00        0.000049  
+
+                                    Resistance   
+  Layer                              / Length         Data source:
+Name        Direction Utilization  (ohm/micron)       lef_library
+-------------------------------------------------
+metal1          H         1.00         5.428571  
+metal2          V         1.00         3.571429  
+metal3          H         1.00         3.571429  
+metal4          V         1.00         1.500000  
+metal5          H         1.00         1.500000  
+metal6          V         1.00         1.500000  
+metal7          H         1.00         0.187500  
+metal8          V         1.00         0.187500  
+metal9          H         1.00         0.037500  
+metal10         V         1.00         0.037500  
+
+                                        Area     
+  Layer                               / Length        Data source:
+Name        Direction Utilization     (micron)        lef_library
+-------------------------------------------------
+metal1          H         1.00         0.070000  
+metal2          V         1.00         0.070000  
+metal3          H         1.00         0.070000  
+metal4          V         1.00         0.140000  
+metal5          H         1.00         0.140000  
+metal6          V         1.00         0.140000  
+metal7          H         1.00         0.400000  
+metal8          V         1.00         0.400000  
+metal9          H         1.00         0.800000  
+metal10         V         1.00         0.800000  
+
+  Incrementally optimizing LOOKAHEAD
+ 
+Incremental optimization status
+===============================
+                          Worst - - DRC Totals - -
+                 Total  Weighted    Max       Max 
+Operation         Area  Neg Slk    Trans      Cap 
+-------------------------------------------------------------------------------
+ init_iopt        1649     -487         0        0
+            Path: b[10] --> s[30]
+ hi_fo_buf        1649     -487         0        0
+            Path: b[10] --> s[30]
+ 
+Incremental optimization status
+===============================
+                          Worst - - DRC Totals - -
+                 Total  Weighted    Max       Max 
+Operation         Area  Neg Slk    Trans      Cap 
+-------------------------------------------------------------------------------
+ init_delay       1649     -487         0        0
+            Path: b[10] --> s[30]
+ incr_delay       1718     -476         0        0
+            Path: b[15] --> s[30]
+ incr_delay       1738     -474         0        0
+            Path: a[6] --> s[16]
+ incr_delay       1766     -472         0        0
+            Path: b[12] --> s[29]
+ incr_delay       1786     -471         0        0
+            Path: b[3] --> s[21]
+ incr_delay       1812     -469         0        0
+            Path: b[12] --> s[21]
+ incr_delay       1846     -467         0        0
+            Path: b[11] --> s[31]
+ incr_delay       1874     -466         0        0
+            Path: a[24] --> s[31]
+ incr_delay       1916     -464         0        0
+            Path: a[6] --> s[31]
+ incr_delay       2002     -461         0        0
+            Path: a[11] --> s[21]
+ incr_delay       2046     -455         0        0
+            Path: a[11] --> s[26]
+ incr_delay       2057     -453         0        0
+            Path: a[10] --> s[26]
+ incr_delay       2068     -453         0        0
+            Path: b[10] --> s[26]
+ incr_delay       2079     -452         0        0
+            Path: a[17] --> s[26]
+ incr_delay       2083     -452         0        0
+            Path: b[12] --> s[26]
+ incr_delay       2083     -452         0        0
+            Path: a[11] --> s[26]
+ incr_delay       2083     -452         0        0
+            Path: a[11] --> s[26]
+ incr_delay       2088     -452         0        0
+            Path: a[3] --> s[11]
+ init_drc         2088     -452         0        0
+            Path: a[3] --> s[11]
+                          Worst - - DRC Totals - -
+                 Total  Weighted    Max       Max    Leakage 
+Operation         Area  Neg Slk    Trans      Cap     Power  
+-------------------------------------------------------------------------------
+ init_power       2088     -452         0        0     3252 
+            Path: a[3] --> s[11]
+ p_rem_buf        2043     -452         0        0     3188 
+            Path: a[3] --> s[11]
+ p_rem_inv        2020     -452         0        0     3165 
+            Path: a[3] --> s[11]
+ p_merge_bi       2014     -452         0        0     3158 
+            Path: a[3] --> s[11]
+ io_phase         1963     -452         0        0     3101 
+            Path: a[18] --> s[29]
+ gate_comp        1940     -452         0        0     3071 
+            Path: a[18] --> s[29]
+ gcomp_mog        1940     -452         0        0     3070 
+            Path: a[18] --> s[29]
+ glob_power       1919     -452         0        0     2856 
+            Path: a[7] --> s[22]
+ power_down       1912     -452         0        0     2804 
+            Path: a[7] --> s[22]
+ 
+Incremental optimization status
+===============================
+                          Worst - - DRC Totals - -
+                 Total  Weighted    Max       Max 
+Operation         Area  Neg Slk    Trans      Cap 
+-------------------------------------------------------------------------------
+ init_delay       1912     -452         0        0
+            Path: a[7] --> s[22]
+ incr_delay       1993     -449         0        0
+            Path: a[11] --> s[26]
+ incr_delay       2008     -448         0        0
+            Path: a[11] --> s[20]
+ incr_delay       2041     -446         0        0
+            Path: a[11] --> s[26]
+ incr_delay       2056     -445         0        0
+            Path: a[11] --> s[26]
+ incr_delay       2056     -445         0        0
+            Path: a[11] --> s[26]
+ incr_delay       2088     -442         0        0
+            Path: a[11] --> s[18]
+ incr_delay       2112     -440         0        0
+            Path: b[3] --> s[27]
+ incr_delay       2111     -440         0        0
+            Path: a[11] --> s[26]
+ incr_delay       2111     -440         0        0
+            Path: a[11] --> s[26]
+ incr_delay       2108     -440         0        0
+            Path: a[11] --> s[26]
+ incr_delay       2109     -440         0        0
+            Path: a[11] --> s[26]
+ init_drc         2109     -440         0        0
+            Path: a[11] --> s[26]
+                          Worst - - DRC Totals - -
+                 Total  Weighted    Max       Max    Leakage 
+Operation         Area  Neg Slk    Trans      Cap     Power  
+-------------------------------------------------------------------------------
+ init_power       2109     -440         0        0     3120 
+            Path: a[11] --> s[26]
+ p_rem_buf        2100     -440         0        0     3108 
+            Path: a[11] --> s[26]
+ p_merge_bi       2094     -440         0        0     3101 
+            Path: a[11] --> s[26]
+ io_phase         2074     -440         0        0     3075 
+            Path: a[11] --> s[26]
+ gate_comp        2070     -440         0        0     3073 
+            Path: a[11] --> s[26]
+ glob_power       2062     -440         0        0     2997 
+            Path: a[11] --> s[26]
+ power_down       2058     -440         0        0     2964 
+            Path: b[22] --> s[27]
+ 
+Incremental optimization status
+===============================
+                          Worst - - DRC Totals - -
+                 Total  Weighted    Max       Max 
+Operation         Area  Neg Slk    Trans      Cap 
+-------------------------------------------------------------------------------
+ init_delay       2058     -440         0        0
+            Path: b[22] --> s[27]
+ incr_delay       2060     -440         0        0
+            Path: a[11] --> s[26]
+ init_drc         2060     -440         0        0
+            Path: a[11] --> s[26]
+
+  Done mapping LOOKAHEAD
+  Synthesis succeeded.
+Runtime & Memory after incremental synthesis
+===========================================
+The RUNTIME after INCREMENTAL is 65 secs
+and the MEMORY_USAGE after INCREMENTAL is 111.16 MB
+===========================================
+  Checking the design.
+
+ 	 Check Design Report
+	 -------------------- 
+
+  Unresolved References & Empty Modules
+COMMAND ERROR: cd /libraries/physical_cells/libcells/
+
+  ------------------------------------- 
+No unresolved references in design 'LOOKAHEAD'
+
+No empty modules in design 'LOOKAHEAD'
+
+ Unloaded Pin(s), Port(s)
+ -------------------------
+No unloaded sequential element in 'LOOKAHEAD'
+
+No unloaded port in 'LOOKAHEAD'
+
+ Assigns
+ ------- 
+Total number of assign statements in design 'LOOKAHEAD' : 0
+
+ Undriven Port(s)/Pin(s)
+ ------------------------
+No undriven combinational pin in 'LOOKAHEAD'
+
+No undriven sequential pin in 'LOOKAHEAD'
+
+No undriven hierarchical pin in 'LOOKAHEAD'
+
+No undriven port in 'LOOKAHEAD'
+
+ Multidriven Port(s)/Pin(s)
+--------------------------
+
+No multidriven combinational pin in 'LOOKAHEAD'
+
+No multidriven sequential pin in 'LOOKAHEAD'
+
+No multidriven hierarchical pin in 'LOOKAHEAD'
+
+No multidriven ports in 'LOOKAHEAD'
+
+No multidriven unloaded nets in 'LOOKAHEAD'
+
+  Constant Pin(s)
+  ----------------
+No constant combinational pin(s) in design 'LOOKAHEAD'
+
+No constant sequential pin(s) in design 'LOOKAHEAD'
+
+No constant hierarchical pin(s) in design 'LOOKAHEAD'
+
+No constant connected ports in design 'LOOKAHEAD'
+
+  Preserved instances(s)
+  ----------------
+No preserved combinational instance(s) in design 'LOOKAHEAD'
+No preserved sequential instance(s) in design 'LOOKAHEAD'
+No preserved hierarchical instance(s) in design 'LOOKAHEAD'
+
+Libcells with no corresponding LEF
+----------------------------------
+No libcell(s) found.
+
+LEF cells with no corresponding libcell
+---------------------------------------
+
+No physical (LEF) cells found.
+
+ Summary
+ ------- 
+
+                Name                 Total 
+-------------------------------------------
+Unresolved References                    0 
+Empty Modules                            0 
+Unloaded Port(s)                         0 
+Unloaded Sequential Pin(s)               0 
+Assigns                                  0 
+Undriven Port(s)                         0 
+Undriven Leaf Pin(s)                     0 
+Undriven hierarchical pin(s)             0 
+Multidriven Port(s)                      0 
+Multidriven Leaf Pin(s)                  0 
+Multidriven hierarchical Pin(s)          0 
+Multidriven unloaded net(s)              0 
+Constant Port(s)                         0 
+Constant Leaf Pin(s)                     0 
+Constant hierarchical Pin(s)             0 
+Preserved leaf instance(s)               0 
+Preserved hierarchical instance(s)       0 
+Libcells with no LEF cell                0 
+Physical (LEF) cells with no libcell     0 
+
+  Done Checking the design.
+============================================================
+  Generated by:           Encounter(R) RTL Compiler RC11.10 - v11.10-p005_1
+  Generated on:           Sep 30 2019  02:53:49 pm
+  Module:                 LOOKAHEAD
+  Technology library:     NangateOpenCellLibrary revision 1.0
+  Operating conditions:   worst_low 
+  Interconnect mode:      global
+  Area mode:              physical library
+============================================================
+
+Timing
+--------
+
+Clock Period 
+--------------------
+clk     20.0 
+
+
+  Cost    Critical            Violating 
+ Group   Path Slack    TNS      Paths   
+----------------------------------------
+default      -440.5   -13916         33 
+----------------------------------------
+Total                 -13916         33 
+
+Instance Count
+--------------
+Leaf Instance Count            413 
+Sequential Instance Count        0 
+Combinational Instance Count   413 
+Hierarchical Instance Count      0 
+
+Area & Power
+------------
+Total Area                         2059.853
+Cell Area                          495.824
+Leakage Power                      0.003 mW
+Dynamic Power                      0.047 mW
+Total Power                        0.050 mW
+
+
+Max Fanout                         6 (b[17])
+Min Fanout                         1 (n_39)
+Average Fanout                     1.8
+Terms to net ratio                 2.6
+Terms to instance ratio            3.0
+Runtime                            65 seconds
+Hostname                           vitor-VirtualBox
+Info    : Time taken to report power. [RPT-7]
+        : 0.00 cpu seconds
+============================================================
+  Generated by:           Encounter(R) RTL Compiler RC11.10 - v11.10-p005_1
+  Generated on:           Sep 30 2019  02:53:49 pm
+  Module:                 LOOKAHEAD
+  Technology library:     NangateOpenCellLibrary revision 1.0
+  Operating conditions:   worst_low 
+  Interconnect mode:      global
+  Area mode:              physical library
+============================================================
+
+ Instance  Cells  Cell Area  Net Area  Total Area 
+--------------------------------------------------
+LOOKAHEAD    413        496      1564        2060 
+============================================================
+  Generated by:           Encounter(R) RTL Compiler RC11.10 - v11.10-p005_1
+  Generated on:           Sep 30 2019  02:53:49 pm
+  Module:                 LOOKAHEAD
+  Technology library:     NangateOpenCellLibrary revision 1.0
+  Operating conditions:   worst_low 
+  Interconnect mode:      global
+  Area mode:              physical library
+============================================================
+
+                 Leakage   Dynamic    Total   
+ Instance Cells Power(mW) Power(mW) Power(mW) 
+----------------------------------------------
+LOOKAHEAD   413     0.003     0.047     0.050 
+
+Info    : Time taken to report power. [RPT-7]
+        : 0.00 cpu seconds
+============================================================
+  Generated by:           Encounter(R) RTL Compiler RC11.10 - v11.10-p005_1
+  Generated on:           Sep 30 2019  02:53:49 pm
+  Module:                 LOOKAHEAD
+  Technology library:     NangateOpenCellLibrary revision 1.0
+  Operating conditions:   worst_low 
+  Interconnect mode:      global
+  Area mode:              physical library
+============================================================
+
+Timing
+--------
+
+Clock Period 
+--------------------
+clk     20.0 
+
+
+  Cost    Critical            Violating 
+ Group   Path Slack    TNS      Paths   
+----------------------------------------
+default      -440.5   -13916         33 
+----------------------------------------
+Total                 -13916         33 
+
+Instance Count
+--------------
+Leaf Instance Count            413 
+Sequential Instance Count        0 
+Combinational Instance Count   413 
+Hierarchical Instance Count      0 
+
+Area & Power
+------------
+Total Area                         2059.853
+Cell Area                          495.824
+Leakage Power                      0.003 mW
+Dynamic Power                      0.047 mW
+Total Power                        0.050 mW
+
+
+Max Fanout                         6 (b[17])
+Min Fanout                         1 (n_39)
+Average Fanout                     1.8
+Terms to net ratio                 2.6
+Terms to instance ratio            3.0
+Runtime                            65 seconds
+Hostname                           vitor-VirtualBox
+Final Runtime & Memory.
+===========================================
+The RUNTIME after FINAL is 65 secs
+and the MEMORY_USAGE after FINAL is 111.16 MB
+===========================================
+============================
+Synthesis Finished .........
+============================
